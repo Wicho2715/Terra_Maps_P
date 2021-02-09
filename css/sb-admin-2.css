@@ -68,6 +68,7 @@ body {
   color: #858796;
   text-align: left;
   background-color: #fff;
+  
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -11242,4 +11243,9 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+
+.form-formularios{
+  padding-top: 50px;
+  padding-left: 30px;
 }
