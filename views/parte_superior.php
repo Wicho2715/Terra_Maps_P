@@ -115,18 +115,18 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pestañas de logueo:</h6>
                         <a class="collapse-item" href="login.html"> Iniciar sesi&oacute;n</a>
-                        <a class="collapse-item" href="register.html">Registro</a>
-                        
+                        <a class="collapse-item" href="registrar_usuario.php">Registro</a>
+
                         <div class="collapse-divider"></div>
-                       
-                       
+
+
                     </div>
                 </div>
             </li>
 
-        
 
-    
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -136,7 +136,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-           
+
 
         </ul>
         <!-- End of Sidebar -->

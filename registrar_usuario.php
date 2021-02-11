@@ -1,6 +1,11 @@
+<?php require_once "views/parte_superior.php"?>
+
+<!--Inicio-->
+
 <!DOCTYPE html>
 <html lang="en">
-
+<div class = "container">
+    <h1></h1>
 <head>
 
     <meta charset="utf-8">
@@ -102,5 +107,8 @@
     <script src="js/sb-admin-2.min.js"></script>
 
 </body>
-
+</div>
 </html>
+<!--Fin-->
+
+<?php require_once "views/parte_inferior.php"?>
