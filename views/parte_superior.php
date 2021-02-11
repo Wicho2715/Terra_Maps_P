@@ -19,6 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- datables CSS basico-->
+    <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.min.css">
+    <!-- datables estilos 4 CSS-->
+    <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+
 
 </head>
 
@@ -83,7 +88,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Etapas de ficha de avance</h6>
-                        <a class="collapse-item" href="utilities-color.html">Antecedentes</a>
+                        <a class="collapse-item" href="antecedentes.php">Antecedentes</a>
                         <a class="collapse-item" href="utilities-border.html">Proyecto Inicial</a>
                         <a class="collapse-item" href="utilities-animation.html">Financiamiento</a>
                         <a class="collapse-item" href="utilities-other.html">Reportes</a>
@@ -150,19 +155,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
