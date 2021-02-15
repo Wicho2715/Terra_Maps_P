@@ -63,7 +63,7 @@
 </div>
 <!-- Modal Crud-->
 <div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="exampleModalLabel"></h5>
@@ -74,37 +74,37 @@
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="nombre" class="col-form-label">Nombre</label>
-						<input type="text" name="form-control" id="nombre">
+						<input type="text" name="form-control" id="nombre"><br>
 						<label for="cargo" class="col-form-label">Cargo</label>
-						<input type="text" name="form-control" id="cargo">
+						<input type="text" name="form-control" id="cargo"><br>
 						<label for="dependencia" class="col-form-label">Dependencia</label>
-						<input type="text" name="form-control" id="dependencia">
+						<input type="text" name="form-control" id="dependencia"><br>
 						<label for="email" class="col-form-label">Email</label>
-						<input type="email" name="form-control" id="email">
+						<input type="email" name="form-control" id="email"><br>
 						<label for="telefono" class="col-form-label">Telefono</label>
-						<input type="tel" name="form-control" id=telefono>
+						<input type="tel" name="form-control" id=telefono><br>
 						<label for="estado" class="col-form-label">Estado</label>
-						<input type="text" name="form-control" id="estado">
+						<input type="text" name="form-control" id="estado"><br>
 						<label for="tipoc" class="col-form-label">Tipo de contacto</label>
-						<input type="text" name="form-control" id="tipoc">
+						<input type="text" name="form-control" id="tipoc"><br>
 						<label for="destinatario" class="col-form-label">Destinatario</label>
-						<input type="text" name="form-control" id="destinatario">
+						<input type="text" name="form-control" id="destinatario"><br>
 						<label for="asunto" class="col-form-label">Asunto</label>
-						<input type="text" name="form-control" id="asunto">
+						<input type="text" name="form-control" id="asunto"><br>
 
 						<label for="resumen" class="col-form-label">Resumen</label>
-						<input type="text" name="form-control" id="resumen">
+						<input type="text" name="form-control" id="resumen"><br>
 						<label for="fechac" class="col-form-label">Fecha del Proximo Contacto</label>
-						<input type="text" name="form-control" id="fechac">
+						<input type="text" name="form-control" id="fechac"><br>
 						<label for="nombrec" class="col-form-label">Nombre del Contacto</label>
-						<input type="text" name="form-control" id="nombrec">
+						<input type="text" name="form-control" id="nombrec"><br>
 						<label for="acuerdo" class="col-form-label">Acuerdo</label>
-						<input type="text" name="form-control" id="acuerdo">
+						<input type="text" name="form-control" id="acuerdo"><br>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-					<button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+					<button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
 				</div>
 			</form>
 		</div>
