@@ -3,16 +3,6 @@
 <div class="container">
 	<h1>Clientes y/o Prospectos</h1>
 
-<?php
-include_once '/bd/conexion.php';
-$objeto = new Conexion();
-$conexion =$objeto->Conectar();
-$consulta = "SELECT FROM clientes";
-$resultado->execute();
-$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-
 <div class = "container">
     <div class="row">
     	<div class="col-lg-12">
@@ -28,49 +18,43 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 				<table id="tablaClientes" class="table table-striped table-bordered table-condensed" style="width: 100%">
 					<thead>
 						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Cargo</th>
+							<th>Dependencia</th>
+							<th>Email</th>
+							<th>Telefono</th>
+							<th>Estado</th>
+							<th>Tipo de contacto</th>
+							<th>Destinatario</th>
+							<th>Asunto</th>
+							<th>Resumen</th>
+							<th>Fecha Contacto</th>
+							<th>Nombre Contacto</th>
+							<th>Acuerdo</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
-						<?php 
-						foreach ($data as $dat) {
-						 	# code...
-						  ?>
+						
 						  <tr>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
-						  	<td><?php echo $dat[''] ?></td>
+						  	<td>00014</td>
+						  	<td>Jose Luis</td>
+						  	<td>El mero mero</td>
+						  	<td>Gobierno</td>
+						  	<td>wg2715wg@gmail.com</td>
+						  	<td>7751655669</td>
+						  	<td>Email</td>
+						  	<td>7751655669</td>
+						  	<td>Check Proyecto</td>
+						  	<td>Mi proyecto es un ejemplo</td>
+						  	<td>Este proyecto es un ejemplo</td>
+						  	<td>27/2/2021</td>
+						  	<td>Jose Luis</td>
+						  	<td>Todos los acuerdos</td>
 						  	<td></td>
 						  </tr>
-						  <?php
-						  	}
-						  ?> 
+						 
 					</tbody>
 				</table>
 			</div>
@@ -89,36 +73,33 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 			<form id="formClientes">
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="nombre" class="col-form-label"></label>
+						<label for="nombre" class="col-form-label">Nombre</label>
 						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
-						<label for="nombre" class="col-form-label"></label>
-						<input type="text" name="form-control" id="nombre">
+						<label for="cargo" class="col-form-label">Cargo</label>
+						<input type="text" name="form-control" id="cargo">
+						<label for="dependencia" class="col-form-label">Dependencia</label>
+						<input type="text" name="form-control" id="dependencia">
+						<label for="email" class="col-form-label">Email</label>
+						<input type="email" name="form-control" id="email">
+						<label for="telefono" class="col-form-label">Telefono</label>
+						<input type="tel" name="form-control" id=telefono>
+						<label for="estado" class="col-form-label">Estado</label>
+						<input type="text" name="form-control" id="estado">
+						<label for="tipoc" class="col-form-label">Tipo de contacto</label>
+						<input type="text" name="form-control" id="tipoc">
+						<label for="destinatario" class="col-form-label">Destinatario</label>
+						<input type="text" name="form-control" id="destinatario">
+						<label for="asunto" class="col-form-label">Asunto</label>
+						<input type="text" name="form-control" id="asunto">
+
+						<label for="resumen" class="col-form-label">Resumen</label>
+						<input type="text" name="form-control" id="resumen">
+						<label for="fechac" class="col-form-label">Fecha del Proximo Contacto</label>
+						<input type="text" name="form-control" id="fechac">
+						<label for="nombrec" class="col-form-label">Nombre del Contacto</label>
+						<input type="text" name="form-control" id="nombrec">
+						<label for="acuerdo" class="col-form-label">Acuerdo</label>
+						<input type="text" name="form-control" id="acuerdo">
 					</div>
 				</div>
 				<div class="modal-footer">
