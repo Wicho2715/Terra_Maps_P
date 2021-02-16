@@ -34,4 +34,13 @@ $("#btnNuevo").click(function(){
 
 		$("#modalCRUD").modal("show");
 });
+$("#btnNuevos").click(function(){
+		$("#formSeguimiento").trigger("reset");
+		$(".modal-header").css("background-color", "#28a745");
+		$(".modal-header").css("color", "white");
+		$(".modal-title").text("Nuevo seguimiento");
+
+
+		$("#modalSeguimiento").modal("show");
+});
 });

@@ -24,7 +24,15 @@
     <!-- datables estilos 4 CSS-->
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
     
-
+    <script type="text/javascript">
+        $(function(){
+            $("#fechac").datepicker({
+                changeMonth:true,
+                changeYear:true,
+                showOn: "button",
+            });
+        })
+    </script>
 
 </head>
 

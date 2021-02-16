@@ -11,15 +11,18 @@
     				<h5 class="modal-title" id="exampleModalLabel">Nuevo Seguimiento</h5>
     				<button class="close" data-dismiss="modal">&times;</button>
     			</div>
-    			<form>
+    			<form id="formSeguimiento">
     				<div class="modal-body">
     					<div class="form-group">
+    					<label for="fechads" class="col-form-label">Fecha de Seguimiento</label>
+    					<input type="date" class="form-control" name="form-control" id="fechads"><br>
     					<label for="nombredc" class="col-form-label">Nombre del Contacto</label>
-						<input type="text" name="form-control" id="nombredc"><br>
+						<input type="text" 
+						class="form-control" name="form-control" id="nombredc"><br>
 						<label for="terminosdc" class="col-form-label">Terminos</label>
-						<input type="text" name="form-control" id="terminosdc"><br>
+						<input type="text-area" class="form-control" name="form-control" id="terminosdc"><br>
 						<label for="estadodc" class="col-form-label">Estado de la Cita</label>
-						<input type="text" name="form-control" id="estadodc"><br>
+						<input type="text" class="form-control" name="form-control" id="estadodc"><br>
 						
     					</div>
     				</div>
@@ -31,7 +34,7 @@
     				</div>
     			</div>
     		</div>
-    <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modalSeguimiento" id="btnNuevo">Nuevo</button>
+    <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modalSeguimiento" id="btnNuevos">Nuevo</button>
 </div>
 
 <!--Fin-->

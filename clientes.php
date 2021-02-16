@@ -74,33 +74,33 @@
 			<form id="formClientes">
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="nombre" >Nombre</label>
-						<input type="text" name="form-control" id="nombre"><br>
+						<label for="nombre" class="col-form-label" >Nombre</label>
+						<input type="text" class="form-control" name="form-control" id="nombre"><br>
 						<label for="cargo" class="col-form-label">Cargo</label>
-						<input type="text" name="form-control" id="cargo"><br>
+						<input type="text" class="form-control" name="form-control" id="cargo"><br>
 						<label for="dependencia" class="col-form-label">Dependencia</label>
-						<input type="text" name="form-control" id="dependencia"><br>
+						<input type="text" class="form-control" name="form-control" id="dependencia"><br>
 						<label for="email" class="col-form-label">Email</label>
-						<input type="email" name="form-control" id="email"><br>
+						<input type="email" class="form-control" name="form-control" id="email"><br>
 						<label for="telefono" class="col-form-label">Telefono</label>
-						<input type="tel" name="form-control" id=telefono><br>
+						<input type="tel" class="form-control" name="form-control" id=telefono><br>
 						<label for="estado" class="col-form-label">Estado</label>
-						<input type="text" name="form-control" id="estado"><br>
+						<input type="text"  class="form-control" name="form-control" id="estado"><br>
 						<label for="tipoc" class="col-form-label">Tipo de contacto</label>
-						<input type="text" name="form-control" id="tipoc"><br>
+						<input type="text" class="form-control" name="form-control" id="tipoc"><br>
 						<label for="destinatario" class="col-form-label">Destinatario</label>
-						<input type="text" name="form-control" id="destinatario"><br>
-						<label for="asunto" class="col-form-label">Asunto</label>
-						<input type="text" name="form-control" id="asunto"><br>
+						<input type="text" class="form-control" name="form-control" id="destinatario"><br>
+						<label for="asunto"  class="col-form-label">Asunto</label>
+						<input type="text" class="form-control" name="form-control" id="asunto"><br>
 
 						<label for="resumen" class="col-form-label">Resumen</label>
-						<input type="text" name="form-control" id="resumen"><br>
+						<input type="text" class="form-control" name="form-control" id="resumen"><br>
 						<label for="fechac" class="col-form-label">Fecha del Proximo Contacto</label>
-						<input type="text" name="form-control" id="fechac"><br>
+						<input type="date" class="form-control"  name="form-control" id="fechac"><br>
 						<label for="nombrec" class="col-form-label">Nombre del Contacto</label>
-						<input type="text" name="form-control" id="nombrec"><br>
+						<input type="text" class="form-control" name="form-control" id="nombrec"><br>
 						<label for="acuerdo" class="col-form-label">Acuerdo</label>
-						<input type="text" name="form-control" id="acuerdo"><br>
+						<input type="text" class="form-control" name="form-control" id="acuerdo"><br>
 					</div>
 				</div>
 				<div class="modal-footer">
