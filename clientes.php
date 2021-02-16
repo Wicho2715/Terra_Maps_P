@@ -1,4 +1,5 @@
 <?php require_once "views/parte_superior.php"?>
+
 <!--Inicio-->
 <div class="container">
 	<h1>Clientes y/o Prospectos</h1>
@@ -73,7 +74,7 @@
 			<form id="formClientes">
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="nombre" class="col-form-label">Nombre</label>
+						<label for="nombre" >Nombre</label>
 						<input type="text" name="form-control" id="nombre"><br>
 						<label for="cargo" class="col-form-label">Cargo</label>
 						<input type="text" name="form-control" id="cargo"><br>
