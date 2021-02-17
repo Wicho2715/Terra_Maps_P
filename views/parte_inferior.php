@@ -54,7 +54,8 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script type="text/javascript" src="vendor/datatables/datatables.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="hojas/main.js"></script>
+    <script type="text/javascript" src="hojas/main1.js"></script>
 </body>
 
 </html>

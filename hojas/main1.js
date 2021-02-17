@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	tablaClientes = $("#tablaClientes").DataTable({
+	tablaSeguimiento = $("#tablaSeguimiento").DataTable({
 		"columnDefs":[{
 			"targets": -1,
 			"data":null,
@@ -22,19 +22,8 @@ $(document).ready(function(){
 		"sProcessing": "Procesando...",
 	}
 	});
-
-
-
-$("#btnNuevo").click(function(){
-		$("#formClientes").trigger("reset");
-		$(".modal-header").css("background-color", "#28a745");
-		$(".modal-header").css("color", "white");
-		$(".modal-title").text("Nuevo cliente");
-
-
-		$("#modalCRUD").modal("show");
-});
-$("#btnNuevos").click(function(){
+	
+	$("#btnNuevos").click(function(){
 		$("#formSeguimiento").trigger("reset");
 		$(".modal-header").css("background-color", "#28a745");
 		$(".modal-header").css("color", "white");

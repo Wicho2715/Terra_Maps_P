@@ -35,6 +35,36 @@
     			</div>
     		</div>
     <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modalSeguimiento" id="btnNuevos">Nuevo</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table id="tablaSeguimiento" class="table table-striped table-bordered table-condensed" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha de proximo contacto</th>
+                                <th>Nombre del contacto</th>
+                                <th>Terminos</th>
+                                <th>Estado de la cita</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00001</td>
+                                <td>05/02/2021</td>
+                                <td>Jose Luis</td>
+                                <td>Terminos del proyecto</td>
+                                <td>En curso</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--Fin-->
