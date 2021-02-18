@@ -24,6 +24,10 @@
     <!-- datables estilos 4 CSS-->
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
 </head>
 
 <body id="page-top">
@@ -88,8 +92,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Etapas de ficha de avance</h6>
                         <a class="collapse-item" href="antecedentes.php">Antecedentes</a>
-                        <a class="collapse-item" href="utilities-border.html">Proyecto Inicial</a>
-                        <a class="collapse-item" href="utilities-animation.html">Financiamiento</a>
+                        <a class="collapse-item" href="proyectoinicial.php">Proyecto Inicial</a>
+                        <a class="collapse-item" href="financiamiento.php">Financiamiento</a>
                         <a class="collapse-item" href="utilities-other.html">Reportes</a>
                     </div>
                 </div>
@@ -108,12 +112,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Acceder-Crear cuenta</span>
+                    <span>Crear cuenta</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pestañas de logueo:</h6>
-                        <a class="collapse-item" href="login.html"> Iniciar sesi&oacute;n</a>
                         <a class="collapse-item" href="registrar_usuario.php">Registro</a>
 
                         <div class="collapse-divider"></div>

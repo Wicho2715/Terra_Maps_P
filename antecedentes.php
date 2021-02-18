@@ -1,117 +1,70 @@
 <?php require_once "views/parte_superior.php"?>
-<!DOCTYPE html>
-<html lang="en">
+<!-- INICIO FORMULARIO HTML -->
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Antecedentes</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-</head>
-
-<body class="bg-gradient-primary">
-
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                           
-                            <div class="col-lg-6">
-                                <div class="p-5">
-
-
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Antecedentes</h1>
-                                        <h1 class="h4 text-gray-900 mb-4">Etapa 1</h1>
-                                    </div>
-                                    <form class="motivacion">
-                                        <div class="form-group">
-                                        <label>Motivo por que contacto a Terra Maps</label>
-                                            <input type="text" class="form-control form-control-user"
-                                                id="motiva-text" 
-                                                placeholder="">
-                                               
-                                        </div>
-                                        <div class="form-group">
-                                        <fieldset>
-                                        <label>Motivo por que contacto a Terra Maps</label>
-                                            <label>
-                                                <input type="radio" name="numero" value="redes"> Redes sociales.
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="numero" value="reco"> Recomendaci&oacute;n por amigos.
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="numero" value="publicidad">Publicidad. 
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="numero" value="proyectos"> Proyectos presentados.
-                                            </label>
-                                        </fieldset>
-                                        </div>
-                                        <!-- <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>-->
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Siguiente
-                                        </a>
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <!--<a class="small" href="forgot-password.html">Forgot Password?</a>-->
-                                    </div>
-                                    <div class="text-center">
-                                        <!--<a class="small" href="register.html">Create an Account!</a>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+<div class="container">
+<header id="header"> Etapa 1 Antecedentes</header>
+    <div clas="abs-center">
+    
+<form method="POST" action="" class="needs-validation" novalidate>
+    <div class="form-row mt-5">
+    <div class="titulo"> --  Motivaci&oacute;n/Experiencia --</div>
+    <br>
+        <div class="col-md-12 mb-12">
+            <label for="validarNombre">Motivo por el que contacto a Terra Maps<span class="red">*</span></label>
+            <input type="text" class="form-control" id="motivo" name="validarMotivo" required>
         </div>
-
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div class="form-row">
+        <div class="col-md-12 mb-12">
+            <label for="validarApellidos">Medio por el cual supo de Terra Maps<span class="red">*</span></label>
+            <fieldset>
+                        <label>
+                            <input type="radio" name="numero" value="1" > Redes sociales
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="numero" value="2"> Campañas publicitarias
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="numero" value="3"> Amigos/Conocidos
+                        </label>
+                    </fieldset>
+        </div>
+    </div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <div class="form-row">
+        <div class="col-md-12 mb-12">
+            <label for="validarEmail">Experiencia que tiene la empresa con el sector<span class="red">*</span></label>
+            <input type="text" class="form-control" id="valiexpsector" name="validarexp" required>
+        </div>
+    </div>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <div class="form-row">
+        <div class="col-md-12 mb-12">
+            <label for="validarTelefono">Experiencia que tiene con los sistemas tecnol&oacute;gicos *</label>
+            <input type="text" class="form-control" id="validarsistemas" name="validarsistemastecno" >
+        </div>
+    </div>
 
-</body>
+ 
 
-</html>
+    <div class="form-group">
+        <label for="validationMensaje">Comentarios Adicionales<span class="red">*</span></label>
+        <textarea class="form-control" id="validationMensaje" name="validationMensaje" rows="3" min="25" required></textarea>
+    </div>
+
+    <div class="form-group mb-10">
+        <button class="btn btn-success" type="reset" name="reset">Limpiar</button>
+        <a  href="antecedentes1.2.php" class="btn btn-primary">Siguiente</a>
+    </div>
+
+</form>
+
+</div>
+</div>
+-->
+<!--Fin-->
+
 <?php require_once "views/parte_inferior.php"?>
-
