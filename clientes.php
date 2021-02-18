@@ -2,7 +2,7 @@
 
 <!--Inicio-->
 <div class="container">
-	<h1>Clientes y/o Prospectos</h1>
+	<h3>Clientes y/o Prospectos</h3>
 
 <div class = "container">
     <div class="row">
