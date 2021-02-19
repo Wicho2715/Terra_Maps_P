@@ -68,14 +68,14 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="exampleModalLabel"></h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+				
 				</button>
 			</div>
 			<form id="formClientes">
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="nombre" class="col-form-label" >Nombre</label>
-						<input type="text" class="form-control" name="form-control" id="nombre"><br>
+						<input type="text" class="form-control" name="form-control" id="nombre" required><br>
 						<label for="cargo" class="col-form-label">Cargo</label>
 						<input type="text" class="form-control" name="form-control" id="cargo"><br>
 						<label for="dependencia" class="col-form-label">Dependencia</label>
@@ -94,13 +94,13 @@
 						<input type="text" class="form-control" name="form-control" id="asunto"><br>
 
 						<label for="resumen" class="col-form-label">Resumen</label>
-						<input type="text" class="form-control" name="form-control" id="resumen"><br>
+						<input type="text" class="form-control" name="form-control" id="resumen" rows="3"><br>
 						<label for="fechac" class="col-form-label">Fecha del Proximo Contacto</label>
 						<input type="date" class="form-control"  name="form-control" id="fechac"><br>
 						<label for="nombrec" class="col-form-label">Nombre del Contacto</label>
 						<input type="text" class="form-control" name="form-control" id="nombrec"><br>
 						<label for="acuerdo" class="col-form-label">Acuerdo</label>
-						<input type="text" class="form-control" name="form-control" id="acuerdo"><br>
+						<input type="text" class="form-control" name="form-control" id="acuerdo" rows="3"><br>
 					</div>
 				</div>
 				<div class="modal-footer">

@@ -30,9 +30,18 @@ $("#btnNuevo").click(function(){
 		$(".modal-header").css("background-color", "#28a745");
 		$(".modal-header").css("color", "white");
 		$(".modal-title").text("Nuevo cliente");
-
-
 		$("#modalCRUD").modal("show");
+		id=null;
 });
+//variable para capturar la fila 
+var fila;
+// boton editar
+$(document).on("click", ".btnEditar", function(){
+	fila = $(this).closest("tr");
+	
+});
+// noton borrar
+$(document).on("click", ".btnBorrar", function(){
 
+});
 });
