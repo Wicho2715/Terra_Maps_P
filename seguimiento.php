@@ -21,24 +21,15 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Fecha del proximo contacto</th>
+                            <th>Fecha</th>
+                            <th>Fecha de contacto</th>
                             <th>Nombre del Contacto</th>
-                            <th>Terminos</th>
+                            <th>Acuerdos</th>
                             <th>Estado de la cita</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
-                          <tr>
-                            <td>00015</td>
-                            <td>17/02/2021</td>
-                            <td>Jose Luis</td>
-                            <td>Estos son los terminos del acuerdo</td>
-                            <td>Estado de la cita</td>
-                            <td></td>
-                          </tr>
-                         
                     </tbody>
                 </table>
             </div>

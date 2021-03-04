@@ -1,118 +1,115 @@
+<?php include("db/conexion.php"); ?>
 <?php require_once "views/parte_superior.php"?>
-
-<!--Inicio-->
+	
 <div class="container">
-	<h3>Clientes y/o Prospectos</h3>
 
-<div class = "container">
-    <div class="row">
-    	<div class="col-lg-12">
-    		<button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Nuevo</button>
-    	</div>
-    </div>
-</div>
-<br>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="table-responsive">
-				<table id="tablaClientes" class="table table-striped table-bordered table-condensed" style="width: 100%">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Nombre</th>
-							<th>Cargo</th>
-							<th>Dependencia</th>
-							<th>Email</th>
-							<th>Telefono</th>
-							<th>Estado</th>
-							<th>Tipo de contacto</th>
-							<th>Destinatario</th>
-							<th>Asunto</th>
-							<th>Resumen</th>
-							<th>Fecha Contacto</th>
-							<th>Nombre Contacto</th>
-							<th>Acuerdo</th>
-							<th>Acciones</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						  <tr>
-						  	<td>00003</td>
-						  	<td>Jose Luis</td>
-						  	<td>El mero mero</td>
-						  	<td>Gobierno</td>
-						  	<td>wg2715wg@gmail.com</td>
-						  	<td>7751655669</td>
-						  	<td>Email</td>
-						  	<td>7751655669</td>
-						  	<td>Check Proyecto</td>
-						  	<td>Mi proyecto es un ejemplo</td>
-						  	<td>Este proyecto es un ejemplo</td>
-						  	<td>27/2/2021</td>
-						  	<td>Jose Luis</td>
-						  	<td>Todos los acuerdos</td>
-						  	<td></td>
-						  </tr>
-						 
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Modal Crud-->
-<div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel"></h5>
-				
-				</button>
-			</div>
-			<form id="formClientes">
-				<div class="modal-body">
-					<div class="form-group">
-						<label for="nombre" class="col-form-label" >Nombre</label>
-						<input type="text" class="form-control" name="form-control" id="nombre" required><br>
-						<label for="cargo" class="col-form-label">Cargo</label>
-						<input type="text" class="form-control" name="form-control" id="cargo"><br>
-						<label for="dependencia" class="col-form-label">Dependencia</label>
-						<input type="text" class="form-control" name="form-control" id="dependencia"><br>
-						<label for="email" class="col-form-label">Email</label>
-						<input type="email" class="form-control" name="form-control" id="email"><br>
-						<label for="telefono" class="col-form-label">Telefono</label>
-						<input type="tel" class="form-control" name="form-control" id=telefono><br>
-						<label for="estado" class="col-form-label">Estado</label>
-						<input type="text"  class="form-control" name="form-control" id="estado"><br>
-						<label for="tipoc" class="col-form-label">Tipo de contacto</label>
-						<input type="text" class="form-control" name="form-control" id="tipoc"><br>
-						<label for="destinatario" class="col-form-label">Destinatario</label>
-						<input type="text" class="form-control" name="form-control" id="destinatario"><br>
-						<label for="asunto"  class="col-form-label">Asunto</label>
-						<input type="text" class="form-control" name="form-control" id="asunto"><br>
-
-						<label for="resumen" class="col-form-label">Resumen</label>
-						<input type="text" class="form-control" name="form-control" id="resumen" rows="3"><br>
-						<label for="fechac" class="col-form-label">Fecha del Proximo Contacto</label>
-						<input type="date" class="form-control"  name="form-control" id="fechac"><br>
-						<label for="nombrec" class="col-form-label">Nombre del Contacto</label>
-						<input type="text" class="form-control" name="form-control" id="nombrec"><br>
-						<label for="acuerdo" class="col-form-label">Acuerdo</label>
-						<input type="text" class="form-control" name="form-control" id="acuerdo" rows="3"><br>
+				<?php if (isset($_SESSION['message'])) { ?>
+					<div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+						<?= $_SESSION['message']?>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-					<button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-<!--Fin-->
-</div>
+				<?php session_unset(); } ?>
+
+        <div class="card">
+            <div class="card-header bg-info">
+                <h3 class="text-white">Clientes y/o Prospectos</h3>
+            </div>
+            <div class="card-body">
+				<form action="acciones/guardar.php" method="POST">
+				<div class="row">
+        			<div class="col-lg-12">
+            			<button type="submit" class="btn btn-success" name="guardar">Guardar</button>
+        			</div>
+    			</div>
+				<br>
+				<div class="row">
+                    <div class="col-md-6">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" name="nombres"  class="form-control" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" name="cargo"  class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="dependencia">Dependencia:</label>
+                        <input type="text" name="dependencia"  class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email"  class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="movil">Teléfono:</label>
+                        <input type="text" name="movil"  class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="estado">Estado:</label>
+                        <input type="text" name="estado"  class="form-control">
+                    </div>
+                </div>
+				</form>	
+
+            </div>
+            <div class="card-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table id="tablaClientes" class="table table-striped table-bordered table-condensed" 
+                                style="width: 100%">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Cargo</th>
+                                            <th>Dependencia</th>
+                                            <th>Email</th>
+                                            <th>Telefono</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+									<?php
+									$query = "SELECT * FROM clientes";
+									$result_cliente = mysqli_query($conn, $query);    
+
+									while($row = mysqli_fetch_assoc($result_cliente)) { ?>
+									<tr>
+										<td><?php echo $row['ID_CLIENTE']; ?></td>
+										<td><?php echo $row['NOMBRE']; ?></td>
+										<td><?php echo $row['CARGO']; ?></td>
+										<td><?php echo $row['DEPENDENCIA']; ?></td>
+										<td><?php echo $row['EMAIL']; ?></td>
+										<td><?php echo $row['MOVIL']; ?></td>
+										<td><?php echo $row['ESTADO']; ?></td>
+										<td>
+										<a href="editar.php?ID_CLIENTE=<?php echo $row['ID_CLIENTE']?>" class="btn btn-primary">
+										<i class="fas fa-marker"></i>
+										</a>
+										<a href="acciones/borrar.php?ID_CLIENTE=<?php echo $row['ID_CLIENTE']?>" class="btn btn-danger">
+										<i class="far fa-trash-alt"></i>
+										</a>
+										</td>
+										
+									</tr>
+									<?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
 
 <?php require_once "views/parte_inferior.php"?>
 

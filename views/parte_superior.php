@@ -25,8 +25,10 @@
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    
+    <link rel="stylesheet" href="css/tabla.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
 
 </head>
 
@@ -75,6 +77,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Apartados:</h6>
                         <a class="collapse-item" href="clientes.php">Clientes</a>
+                        <a class="collapse-item" href="contacto.php">Contactos</a>
                         <a class="collapse-item" href="seguimiento.php">Seguimientos</a>
                     </div>
                 </div>
