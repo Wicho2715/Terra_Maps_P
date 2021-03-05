@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +28,10 @@
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    
+    <link rel="stylesheet" href="css/tabla.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
 
 </head>
 
@@ -75,6 +80,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Apartados:</h6>
                         <a class="collapse-item" href="clientes.php">Clientes</a>
+                        <a class="collapse-item" href="contacto.php">Contactos</a>
                         <a class="collapse-item" href="seguimiento.php">Seguimientos</a>
                     </div>
                 </div>
@@ -157,7 +163,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -233,13 +239,13 @@
                                         <span class="font-weight-bold">Alba Contreras, 7715259164, Asunto cita programada.</span>
                                     </div>
                                 </a>
-                                
-                                
+
+
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
 
-                      
+
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -247,7 +253,13 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Erick Gomez</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                  <?php
+                                    $nombre= $_SESSION['nombre'];
+                                    $apellido= $_SESSION['apellido'];
+                                    echo "$nombre ";
+                                  ?>
+                                </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -259,7 +271,7 @@
                                     Perfil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="cerrar_sesion.php" >
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesion
                                 </a>
