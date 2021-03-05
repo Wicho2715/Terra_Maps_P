@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="plugins/sweetarlet/sweetarlet.min.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-gradient-primary">
@@ -43,14 +43,15 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Bienvenid@ a Customer Assistant</h1>
                                     </div>
-                                    <form class="user" id="iniciar" action="validar_usuario.php" method="post">
+                                    <form class="user">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="usuario" name="usuario" placeholder="Usuario">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="password" name="password" placeholder="Contraseña">
+                                                id="exampleInputPassword" placeholder="Contraseña">
                                         </div>
                                         <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -59,10 +60,9 @@
                                                     Me</label>
                                             </div>
                                         </div>-->
-                                        <input class="btn btn-primary btn-user btn-block" type="submit" value="Iniciar sesion">
-                                        <!--<a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Iniciar sesion
-                                        </a>-->
+                                        </a>
 
                                         <!-- <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
@@ -104,7 +104,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
 
 </body>
 

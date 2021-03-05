@@ -17,35 +17,34 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Crea una cuenta!</h1>
                             </div>
-                            <form class="user" action="guardar_usuario.php" method="post">
+                            <form class="user">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nombre" name="nombre"
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="Nombre(s)">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="apellido" name="apellido"
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Apellido">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="usuario" name="usuario"
-                                        placeholder="Email">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Usuario">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="password" name="password" placeholder="Contraseña">
+                                            id="exampleInputPassword" placeholder="Contraseña">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="conf_password" name="conf_password"  placeholder="Confirmar contraseña">
+                                            id="exampleRepeatPassword" placeholder="Confirmar contraseña">
                                     </div>
                                 </div>
-                                <input class="btn btn-primary btn-user btn-block" type="submit" value="Guardar">
-                                <!--<a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
                                     Registrar
-                                </a>-->
+                                </a>
                                 <hr>
 
                                 <!--<a href="index.html" class="btn btn-google btn-user btn-block">
