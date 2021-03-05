@@ -125,7 +125,49 @@
 									<?php } ?>
                                     </tbody>
                                 </table>
-                                <br>
+                                <br> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-header bg-info">
+                 <h3 class="text-white">Publicidad</h3>
+            </div>
+            <div class="card-body">
+                <form action="acciones/guardar.publicidad.php" method="POST">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-success" name="guardarpu">Guardar</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nombrepu">Nombre de la Publicidad:</label>
+                            <input type="text" name="nombrepu"  class="form-control" autofocus>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tipopu">Tipo:</label>
+                            <input type="text" name="tipopu"  class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="descripcion">Descripcion:</label>
+                            <input type="text" name="descripcion"  class="form-control">
+                        </div>
+                    </div>
+                </form>                        
+            </div>
+            <div class="card-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
                                 <table id="tablaPublicidad" class="table table-striped table-bordered table-condensed" style="width: 100%">
                                     <thead>
                                         <tr>
@@ -137,35 +179,33 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-									<?php
-									$query = "SELECT * FROM publicidad";
-									$result_publicidad = mysqli_query($conn, $query);    
+                                        <?php
+                                            $query = "SELECT * FROM publicidad";
+                                            $result_publicidad = mysqli_query($conn, $query);    
 
-									while($row = mysqli_fetch_assoc($result_publicidad)) { ?>
-									<tr>
-										<td><?php echo $row['ID_PUBLICIDAD']; ?></td>
-										<td><?php echo $row['NOMBRE_PU']; ?></td>
-										<td><?php echo $row['TIPO']; ?></td>
-										<td><?php echo $row['DESCRIPCION']; ?></td>
-										<td>
-										<a href="acciones/editar.publicidad.php?ID_PUBLICIDAD=<?php echo $row['ID_PUBLICIDAD']?>" class="btn btn-primary">
-										<i class="fas fa-marker"></i>
-										</a>
-										<a href="acciones/borrar.publicidad.php?ID_PUBLICIDAD=<?php echo $row['ID_PUBLICIDAD']?>" class="btn btn-danger">
-										<i class="far fa-trash-alt"></i>
-										</a>
-										</td>
-									</tr>
-									<?php } ?>
+                                            while($row = mysqli_fetch_assoc($result_publicidad)) { ?>
+                                                <tr>
+                                                    <td><?php echo $row['ID_PUBLICIDAD']; ?></td>
+                                                    <td><?php echo $row['NOMBRE_PU']; ?></td>
+                                                    <td><?php echo $row['TIPO']; ?></td>
+                                                    <td><?php echo $row['DESCRIPCION']; ?></td>
+                                                    <td>
+                                                        <a href="editar.publicidad.php?ID_PUBLICIDAD=<?php echo $row['ID_PUBLICIDAD']?>" class="btn btn-primary">
+                                                            <i class="fas fa-marker"></i>
+                                                        </a>
+                                                        <a href="acciones/borrar.publicidad.php?ID_PUBLICIDAD=<?php echo $row['ID_PUBLICIDAD']?>" class="btn btn-danger">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>	
 
 <?php require_once "views/parte_inferior.php"?>

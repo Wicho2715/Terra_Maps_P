@@ -100,6 +100,7 @@ if (isset($_POST['modificar'])) {
         <div class="row">
         	<div class="col-lg-12">
             	<button class="btn btn-primary" name="modificar">Actualizar</button>
+              <a  href="contacto.php" class="btn btn-danger">Cancelar</a>
         	</div>
     	</div>
       </form>
