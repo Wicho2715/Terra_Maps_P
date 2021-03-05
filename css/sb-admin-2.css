@@ -555,10 +555,15 @@ pre code {
 .container-lg,
 .container-xl {
   width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  height: 100%;
+  padding-right: 0;
+  padding-left: 00;
   margin-right: auto;
   margin-left: auto;
+}
+
+#mycontainer {
+  max-height: 1280px !important;
 }
 
 @media (min-width: 576px) {
@@ -9764,7 +9769,8 @@ a:focus {
 #wrapper #content-wrapper {
   background-color: #f8f9fc;
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  
 }
 
 #wrapper #content-wrapper #content {
