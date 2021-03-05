@@ -1,4 +1,4 @@
-<?php include("db/conexion.php"); ?>
+<?php include("db/conexion1.php"); ?>
 <?php require_once "views/parte_superior.php"?>
 	
 <div class="container">

@@ -1,5 +1,5 @@
 <?php
-include("../db/conexion.php");
+include("../db/conexion1.php");
 
 if(isset($_POST['guardarse'])){
     $fechac = $_POST['fechac'];

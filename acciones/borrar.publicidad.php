@@ -1,6 +1,6 @@
 <?php
 
-include("../db/conexion.php");
+include("../db/conexion1.php");
 
 if(isset($_GET['ID_PUBLICIDAD'])) {
   $id = $_GET['ID_PUBLICIDAD'];
