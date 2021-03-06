@@ -1,6 +1,6 @@
 <?php
 
-include("db/conexion1.php");
+include("db/conexion.php");
 
 $nombrepu = '';
 $tipopu = '';

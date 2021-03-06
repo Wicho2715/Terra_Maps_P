@@ -1,6 +1,6 @@
 <?php
 
-include("db/conexion1.php");
+include("db/conexion.php");
 
 $fechac = '';
 $estadoc = '';
@@ -25,7 +25,7 @@ if (isset($_POST['modificarse'])) {
   $estadoc = $_POST['estadoc'];
   $idcontacto = $_POST['idcontacto'];
 
-  $query = "UPDATE seguimiento set FECHA = '$fechac', ESTADO_CITA = '$estadoc', ID_CONTACTP = '$idcontacto' WHERE ID_PUBLICIDAD = $id";
+  $query = "UPDATE seguimiento set FECHA = '$fechac', ESTADO_CITA = '$estadoc', ID_CONTACTO = '$idcontacto' WHERE ID_PUBLICIDAD = $id";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Informacion Actualizada Correctamente';
   $_SESSION['message_type'] = 'primary';

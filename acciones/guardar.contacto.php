@@ -1,5 +1,5 @@
 <?php
-include("../db/conexion1.php");
+include("../db/conexion.php");
 
 if(isset($_POST['guardar'])){
     $tipoc = $_POST['tipocontacto'];
