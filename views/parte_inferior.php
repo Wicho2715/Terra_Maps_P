@@ -52,6 +52,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script src="interfaces/codigo.js"></script>
 
     <script type="text/javascript" src="vendor/datatables/datatables.min.js"></script>
     
