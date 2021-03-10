@@ -40,17 +40,21 @@ if (isset($_POST['modificar'])) {
                 <h3 class="text-white">Modificar Seguimiento</h3>
             </div>
     <div class="card card-body">
-      <form action="editar.seguimiento.php?ID_SEGUIMIENTO=<?php echo $_GET['ID_SEGUIMIENTO']; ?>" method="POST">
+      <form action="editar.seguimiento.php?ID_SEGUIMIENTO=<?php echo $_GET['ID_SEGUIMIENTO']; ?>" method="POST" class="needs-validation" novalidate>
       
         <div class="form-group">
             <div class="row">
               <div class="col-md-6">
                 <label for="fechac">Fecha del Seguimiento:</label> 
-                <input name="fechac" type="date" class="form-control" value="<?php echo $fechac;?>">
+                <input name="fechac" type="date" class="form-control" placeholder="" required value="<?php echo $fechac;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
                 <label for="estadoc">Estado de la Cita:</label> 
-                <input name="estadoc" type="text" class="form-control" value="<?php echo $estadoc; ?>">
+                <input name="estadoc" type="text" class="form-control" placeholder="" required value="<?php echo $estadoc; ?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div> 
             </div> 
         </div>
@@ -58,7 +62,9 @@ if (isset($_POST['modificar'])) {
           <div class="row">
               <div class="col-md-6">
                 <label for="idcontacto">ID del Contacto:</label> 
-                <input name="idcontacto" type="text" class="form-control" value="<?php echo $idcontacto;?>">
+                <input name="idcontacto" type="text" class="form-control" placeholder="" required value="<?php echo $idcontacto;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
           </div>
         </div>
