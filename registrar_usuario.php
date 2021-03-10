@@ -20,26 +20,26 @@
                             <form class="user" action="guardar_usuario.php" method="post">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nombre" name="nombre"
+                                        <input type="text" class="form-control form-control-user" id="nombre" name="nombre" required
                                             placeholder="Nombre(s)">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="apellido" name="apellido"
+                                        <input type="text" class="form-control form-control-user" id="apellido" name="apellido" required
                                             placeholder="Apellido">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="usuario" name="usuario"
+                                    <input type="email" class="form-control form-control-user" id="usuario" name="usuario" required
                                         placeholder="Email">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="password" name="password" placeholder="Contraseña">
+                                            id="password" name="password" required placeholder="Contraseña">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="conf_password" name="conf_password"  placeholder="Confirmar contraseña">
+                                            id="conf_password" name="conf_password" required  placeholder="Confirmar contraseña">
                                     </div>
                                 </div>
                                 <input class="btn btn-primary btn-user btn-block" type="submit" value="Guardar">

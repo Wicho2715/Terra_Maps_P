@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+require 'db/conexion.php';
 $nombre= $_POST['nombre'];
 $apellido= $_POST['apellido'];
 $usuario= $_POST['usuario'];
@@ -20,7 +20,7 @@ $conf_password= $_POST['conf_password'];
 <?php
 
 $consulta= "SELECT * FROM login WHERE USUARIO= '$usuario'";
-$resultado= mysqli_query($conexion, $consulta);
+$resultado= mysqli_query($conn, $consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas > 0){
@@ -57,7 +57,7 @@ if($password != $conf_password){ ?>
 }
 $password_cifrada= password_hash($password, PASSWORD_DEFAULT);
 $query= "INSERT INTO login(NOMBRE, APELLIDO, USUARIO, PASSWORD) VALUES ('$nombre', '$apellido', '$usuario', '$password_cifrada')";
-if($resultado=mysqli_query($conexion, $query)){
+if($resultado=mysqli_query($conn, $query)){
   ?>
   <script type="text/javascript">
   swal.fire({
@@ -90,7 +90,7 @@ if($resultado=mysqli_query($conexion, $query)){
   <?php
 }
 mysqli_free_result($resultado);
-mysqli_close($conexion);
+mysqli_close($conn);
 ?>
 
 

@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="plugins/sweetarlet/sweetarlet.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gradient-primary">
@@ -46,11 +45,11 @@
                                     <form class="user" id="iniciar" action="validar_usuario.php" method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="usuario" name="usuario" placeholder="Usuario">
+                                                id="usuario" name="usuario" required placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="password" name="password" placeholder="Contraseña">
+                                                id="password" name="password" required placeholder="Contraseña">
                                         </div>
                                         <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -81,7 +80,7 @@
                                         <!--<a class="small" href="forgot-password.html">Forgot Password?</a>-->
                                     </div>
                                     <div class="text-center">
-                                        <!--<a class="small" href="register.html">Create an Account!</a>-->
+                                        <a class="small" href="registrar_usuario.php">Crear cuenta!</a>
                                     </div>
                                 </div>
                             </div>
