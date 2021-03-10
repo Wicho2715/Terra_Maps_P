@@ -17,7 +17,7 @@
                 <h3 class="text-white">Contactos</h3>
             </div>
             <div class="card-body">
-				<form action="acciones/guardar.contacto.php" method="POST">
+				<form action="acciones/guardar.contacto.php" method="POST" class="needs-validation" novalidate>
 				<div class="row">
         			<div class="col-lg-12">
             			<button type="submit" class="btn btn-success" name="guardar">Guardar</button>
@@ -27,47 +27,65 @@
 				<div class="row">
                     <div class="col-md-6">
                         <label for="tipocontacto">Tipo de contacto:</label>
-                        <input type="text" name="tipocontacto"  class="form-control" autofocus>
+                        <input type="text" name="tipocontacto"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="destinatario">Destinatario:</label>
-                        <input type="text" name="destinatario"  class="form-control">
+                        <input type="text" name="destinatario"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="asunto">Asunto:</label>
-                        <input type="text" name="asunto"  class="form-control">
+                        <input type="text" name="asunto"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="resumen">Resumen:</label>
-                        <input type="text" name="resumen"  class="form-control">
+                        <input type="text" name="resumen"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="fechac">Fecha del proximo Contacto:</label>
-                        <input type="date" name="fechac"  class="form-control">
+                        <input type="date" name="fechac"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="nombrec">Nombre del Contacto:</label>
-                        <input type="text" name="nombrec"  class="form-control">
+                        <input type="text" name="nombrec"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="acuerdo">Acuerdos:</label>
-                        <input type="text" name="acuerdo"  class="form-control" >
+                        <input type="text" name="acuerdo"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="idcliente">ID del Cliente:</label>
-                        <input type="text" name="idcliente"  class="form-control">
+                        <input type="text" name="idcliente"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="idpublicidad">ID de la Publicidad:</label>
-                        <input type="text" name="idpublicidad"  class="form-control" >
+                        <input type="text" name="idpublicidad"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                      </div>  
                 </div>
 				</form>	
@@ -138,7 +156,7 @@
                  <h3 class="text-white">Publicidad</h3>
             </div>
             <div class="card-body">
-                <form action="acciones/guardar.publicidad.php" method="POST">
+                <form action="acciones/guardar.publicidad.php" method="POST" class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-lg-12">
                             <button type="submit" class="btn btn-success" name="guardarpu">Guardar</button>
@@ -148,17 +166,23 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label for="nombrepu">Nombre de la Publicidad:</label>
-                            <input type="text" name="nombrepu"  class="form-control" autofocus>
+                            <input type="text" name="nombrepu"  class="form-control" placeholder="" value="" required>
+                            <div class="valid-feedback">¡OK valido!</div>
+                            <div class="invalid-feedback">Completar el campo.</div>
                         </div>
                         <div class="col-md-6">
                             <label for="tipopu">Tipo:</label>
-                            <input type="text" name="tipopu"  class="form-control">
+                            <input type="text" name="tipopu"  class="form-control" placeholder="" value="" required>
+                            <div class="valid-feedback">¡OK valido!</div>
+                            <div class="invalid-feedback">Completar el campo.</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <label for="descripcion">Descripcion:</label>
-                            <input type="text" name="descripcion"  class="form-control">
+                            <input type="text" name="descripcion"  class="form-control" placeholder="" value="" required>
+                            <div class="valid-feedback">¡OK valido!</div>
+                            <div class="invalid-feedback">Completar el campo.</div>
                         </div>
                     </div>
                 </form>                        

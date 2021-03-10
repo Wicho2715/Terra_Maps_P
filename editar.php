@@ -48,17 +48,21 @@ if (isset($_POST['modificar'])) {
                 <h3 class="text-white">Modificar Clientes y/o Prospectos</h3>
             </div>
     <div class="card card-body">
-      <form action="editar.php?ID_CLIENTE=<?php echo $_GET['ID_CLIENTE']; ?>" method="POST">
+      <form action="editar.php?ID_CLIENTE=<?php echo $_GET['ID_CLIENTE']; ?>" method="POST" class="needs-validation" novalidate>
       
         <div class="form-group">
             <div class="row">
               <div class="col-md-6">
                 <label for="nombre">Nombres:</label> 
-                <input name="nombre" type="text" class="form-control" value="<?php echo $nombre;?>">
+                <input name="nombre" type="text" class="form-control" placeholder="" required value="<?php echo $nombre;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
                 <label for="cargo">Cargo:</label> 
-                <input name="cargo" type="text" class="form-control" value="<?php echo $cargo; ?>">
+                <input name="cargo" type="text" class="form-control" placeholder="" required value="<?php echo $cargo; ?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div> 
             </div> 
         </div>
@@ -66,11 +70,15 @@ if (isset($_POST['modificar'])) {
           <div class="row">
               <div class="col-md-6">
                 <label for="dependencia">Dependencia:</label> 
-                <input name="dependencia" type="text" class="form-control" value="<?php echo $dependencia;?>">
+                <input name="dependencia" type="text" class="form-control" placeholder="" required value="<?php echo $dependencia;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
                 <label for="email">Email:</label> 
-                <input name="email" type="text" class="form-control" value="<?php echo $email; ?>">
+                <input name="email" type="text" class="form-control" placeholder="" required value="<?php echo $email; ?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div> 
           </div>
         </div>
@@ -78,11 +86,15 @@ if (isset($_POST['modificar'])) {
           <div class="row">
               <div class="col-md-6">
                 <label for="movil">Movil:</label> 
-                <input name="movil" type="text" class="form-control" value="<?php echo $movil;?>">
+                <input name="movil" type="text" class="form-control" placeholder="" required value="<?php echo $movil;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
                 <label for="estado">Estado:</label> 
-                <input name="estado" type="text" class="form-control" value="<?php echo $estado; ?>">
+                <input name="estado" type="text" class="form-control"placeholder="" required value="<?php echo $estado; ?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div> 
           </div> 
         </div>

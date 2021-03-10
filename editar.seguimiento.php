@@ -19,13 +19,13 @@ if  (isset($_GET['ID_SEGUIMIENTO'])) {
   }
 }
 
-if (isset($_POST['modificarse'])) {
+if (isset($_POST['modificar'])) {
   $id = $_GET['ID_SEGUIMIENTO'];
   $fechac= $_POST['fechac'];
   $estadoc = $_POST['estadoc'];
   $idcontacto = $_POST['idcontacto'];
 
-  $query = "UPDATE seguimiento set FECHA = '$fechac', ESTADO_CITA = '$estadoc', ID_CONTACTP = '$idcontacto' WHERE ID_PUBLICIDAD = $id";
+  $query = "UPDATE seguimiento set FECHA = '$fechac', ESTADO_CITA = '$estadoc', ID_CONTACTO = '$idcontacto' WHERE ID_SEGUIMIENTO = $id";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Informacion Actualizada Correctamente';
   $_SESSION['message_type'] = 'primary';
@@ -40,17 +40,21 @@ if (isset($_POST['modificarse'])) {
                 <h3 class="text-white">Modificar Seguimiento</h3>
             </div>
     <div class="card card-body">
-      <form action="editar.seguimiento.php?ID_SEGUIMIENTO=<?php echo $_GET['ID_SEGUIMIENTO']; ?>" method="POST">
+      <form action="editar.seguimiento.php?ID_SEGUIMIENTO=<?php echo $_GET['ID_SEGUIMIENTO']; ?>" method="POST" class="needs-validation" novalidate>
       
         <div class="form-group">
             <div class="row">
               <div class="col-md-6">
                 <label for="fechac">Fecha del Seguimiento:</label> 
-                <input name="fechac" type="date" class="form-control" value="<?php echo $fechac;?>">
+                <input name="fechac" type="date" class="form-control" placeholder="" required value="<?php echo $fechac;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
                 <label for="estadoc">Estado de la Cita:</label> 
-                <input name="estadoc" type="text" class="form-control" value="<?php echo $estadoc; ?>">
+                <input name="estadoc" type="text" class="form-control" placeholder="" required value="<?php echo $estadoc; ?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div> 
             </div> 
         </div>
@@ -58,13 +62,15 @@ if (isset($_POST['modificarse'])) {
           <div class="row">
               <div class="col-md-6">
                 <label for="idcontacto">ID del Contacto:</label> 
-                <input name="idcontacto" type="text" class="form-control" value="<?php echo $idcontacto;?>">
+                <input name="idcontacto" type="text" class="form-control" placeholder="" required value="<?php echo $idcontacto;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
           </div>
         </div>
         <div class="row">
         	<div class="col-lg-12">
-            	<button class="btn btn-primary" name="modificarse">Actualizar</button>
+            	<button class="btn btn-primary" name="modificar">Actualizar</button>
                 <a  href="seguimiento.php" class="btn btn-danger">Cancelar</a>
             </div>
     	</div>

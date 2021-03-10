@@ -17,7 +17,7 @@
                 <h3 class="text-white">Clientes y/o Prospectos</h3>
             </div>
             <div class="card-body">
-				<form action="acciones/guardar.php" method="POST">
+				<form action="acciones/guardar.php" method="POST" class="needs-validation" novalidate>
 				<div class="row">
         			<div class="col-lg-12">
             			<button type="submit" class="btn btn-success" name="guardar">Guardar</button>
@@ -27,31 +27,43 @@
 				<div class="row">
                     <div class="col-md-6">
                         <label for="nombres">Nombres:</label>
-                        <input type="text" name="nombres"  class="form-control" autofocus>
+                        <input type="text" name="nombres"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="cargo">Cargo:</label>
-                        <input type="text" name="cargo"  class="form-control">
+                        <input type="text" name="cargo"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="dependencia">Dependencia:</label>
-                        <input type="text" name="dependencia"  class="form-control">
+                        <input type="text" name="dependencia"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="email">Email:</label>
-                        <input type="text" name="email"  class="form-control">
+                        <input type="text" name="email"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="movil">Teléfono:</label>
-                        <input type="text" name="movil"  class="form-control">
+                        <input type="text" name="movil"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="estado">Estado:</label>
-                        <input type="text" name="estado"  class="form-control">
+                        <input type="text" name="estado"  class="form-control" placeholder="" value="" required>
+                        <div class="valid-feedback">¡OK valido!</div>
+                        <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
 				</form>	
