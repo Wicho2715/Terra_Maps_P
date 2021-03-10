@@ -5,7 +5,7 @@
 <header id="header"> Etapa 3 Financiamiento</header>
     <div clas="abs-center">
     
-<form method="POST" action="guardarfinanciamiento.php" class="needs-validation" novalidate>
+<form method="POST" action="acciones/guardarfinanciamiento.php" class="needs-validation" novalidate>
     <div class="form-row mt-5">
 
     

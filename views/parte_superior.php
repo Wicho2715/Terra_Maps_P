@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +24,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.min.css">
     <!-- datables estilos 4 CSS-->
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
-
+    <link href="css/estilos.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/tabla.css">
@@ -254,11 +252,7 @@ session_start();
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                  <?php
-                                    $nombre= $_SESSION['nombre'];
-                                    $apellido= $_SESSION['apellido'];
-                                    echo "$nombre ";
-                                  ?>
+                                 
                                 </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">

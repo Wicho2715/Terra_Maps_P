@@ -1,6 +1,6 @@
 <?php
 
-include ("bd/conexion.php"); 
+include ("../bd/conexion.php"); 
 
     $motivo = $_POST["motivo"];
     $exp_sector = $_POST["exp_sector"];

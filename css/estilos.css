@@ -31,15 +31,15 @@ color: lightslategrey;
   max-height: 100% !important;
 }
 
-
+/*
 .container .btn-primary{
   background: #0052D4;  
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+ /* background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
     /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
+  /*background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  width: 100px;
+  /*width: 100px;
   height: 40px;
   border:none;
   color:#fff; 
@@ -47,15 +47,16 @@ color: lightslategrey;
   font-size: 16px;
   
 }
-
+*/
+/*
 button{
     background: #0052D4;  
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+    /*background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
       /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
+    /*background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: block;
+   /* display: block;
     width: 100px;
     height: 40px;
     border:none;
@@ -65,6 +66,7 @@ button{
     margin: 10px auto;
     
 }
+/*
 
 
 

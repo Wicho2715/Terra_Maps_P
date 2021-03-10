@@ -5,7 +5,7 @@
 <header id="header"> Etapa 2 Proyecto Inicial</header>
     <div clas="abs-center">
     
-<form method="POST" action="guardarproyectoinicial.php" class="needs-validation" >
+<form method="POST" action="acciones/guardarproyectoinicial.php" class="needs-validation" >
     <div class="form-row mt-5">
     <div class="titulo"> --  Informaci&oacute;n General  --</div>
     <br>
@@ -21,13 +21,7 @@
     </div>
 
 
-    <div class="form-row">
-        <div class="col-md-12 mb-12">
-            <label for="validarnomen">Nombre del representante del proyecto<span class="red">*</span></label>
-            <input type="text" class="form-control" name="nomre" required>
-        </div>
-    </div>
-
+   
     <div class="form-row">
         <div class="col-md-12 mb-12">
             <label for="validarpuen">Puesto que desempe&ntilde;a *</label>

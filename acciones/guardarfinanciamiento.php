@@ -1,7 +1,7 @@
 <?php
 
 
-include ("bd/conexion.php"); 
+include ("../bd/conexion.php"); 
 
 $inversion = $_POST["inversion"];
 $nomf = $_POST['nomf'];

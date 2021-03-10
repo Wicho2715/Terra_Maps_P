@@ -17,9 +17,18 @@
 
 <div class="container-fluid">
     <div id="mycontainer" class="container">
+    <?php if (isset($_SESSION['message'])) { ?>
+					<div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+						<?= $_SESSION['message']?>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				<?php session_unset(); } ?>
+
 <header id="header"> Etapa 1 Antecedentes</header>
     <div clas="abs-center">
-<form method="post" action="guardarantecedentes.php" class="needs-validation" novalidate>
+<form method="post" action="acciones/guardarantecedentes.php" class="needs-validation" novalidate>
     <div class="form-row mt-5">
     <div class="titulo"> --  Motivaci&oacute;n/Experiencia --</div>
     <br>
