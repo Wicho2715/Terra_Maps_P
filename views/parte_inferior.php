@@ -45,15 +45,20 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script src="interfaces/clientes.js"></script>
+    <script src="interfaces/contacto.js"></script>
+    <script src="interfaces/publicidad.js"></script>
+    <script src="interfaces/seguimiento.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
     <script src="interfaces/codigo.js"></script>
-
     <script type="text/javascript" src="vendor/datatables/datatables.min.js"></script>
     
 </body>

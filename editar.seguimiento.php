@@ -19,13 +19,13 @@ if  (isset($_GET['ID_SEGUIMIENTO'])) {
   }
 }
 
-if (isset($_POST['modificarse'])) {
+if (isset($_POST['modificar'])) {
   $id = $_GET['ID_SEGUIMIENTO'];
   $fechac= $_POST['fechac'];
   $estadoc = $_POST['estadoc'];
   $idcontacto = $_POST['idcontacto'];
 
-  $query = "UPDATE seguimiento set FECHA = '$fechac', ESTADO_CITA = '$estadoc', ID_CONTACTO = '$idcontacto' WHERE ID_PUBLICIDAD = $id";
+  $query = "UPDATE seguimiento set FECHA = '$fechac', ESTADO_CITA = '$estadoc', ID_CONTACTO = '$idcontacto' WHERE ID_SEGUIMIENTO = $id";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Informacion Actualizada Correctamente';
   $_SESSION['message_type'] = 'primary';
@@ -64,7 +64,7 @@ if (isset($_POST['modificarse'])) {
         </div>
         <div class="row">
         	<div class="col-lg-12">
-            	<button class="btn btn-primary" name="modificarse">Actualizar</button>
+            	<button class="btn btn-primary" name="modificar">Actualizar</button>
                 <a  href="seguimiento.php" class="btn btn-danger">Cancelar</a>
             </div>
     	</div>
