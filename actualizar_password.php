@@ -90,7 +90,6 @@ if($password_decifrada== $password_actual){
     <?php
   }
 }
-mysqli_free_result($resultado);
 mysqli_close($conn);
 ?>
 
