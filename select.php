@@ -1,19 +1,31 @@
-<div id="clientes">
-    <label> <select name="" class="form-control">
+<?php
+    include ("bd/conexion.php");
+    
+    
+    $query=mysqli_query($conexion,"SELECT ID_CLIENTE, NOMBRE FROM clientes");
+?>
 
+<html>
+<head>
+</head>
+<body>
+
+<form action="" >
+    <div>
+    <select name="nomre">
+    <?php 
+        while($datos = mysqli_fetch_array($query))
+        {
+    ?>
+            <option value="<?php echo $datos['ID_CLIENTE']?>"> <?php echo $datos['NOMBRE']?> </option>
     <?php
-        include 'bd/conexion.php';
-
-        $consulta= "SELECT * FROM clientes";
-        $ejecutar=mysqlli_query($conexion,$consulta) or die(mysqli_error($conexion));
-        
+        }
+    
     ?>
 
-    <?php foreach ($ejecutar as $opciones): ?>
+    </select>
     
-        <option value="<?php echo $opciones['NOMBRE']?>"></option>
-
-    <?php endforeach ?>
-
-    </select></label>
-   </div>
+</form>
+</div>
+</body>
+</html>
