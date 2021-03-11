@@ -76,7 +76,7 @@ if (isset($_POST['modificar'])) {
               </div>
               <div class="col-md-6">
                 <label for="email">Email:</label> 
-                <input name="email" type="text" class="form-control" placeholder="" required value="<?php echo $email; ?>">
+                <input name="email" type="email" class="form-control" placeholder="" required value="<?php echo $email; ?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div> 
