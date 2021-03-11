@@ -18,7 +18,7 @@ VALUES ('ETAPA 2','$nomproyec','$objetpro','$nomre','$puesto',$telefono,'$planmk
 
 //Ejecutar consulta
 
-$res = mysqli_query($conexion, $insert);
+$res = mysqli_query($conn, $insert);
 if (!$res){
   echo '<script>
        alert("Error al guardar informacion");
@@ -35,7 +35,7 @@ else{
 
 
 //cerrar conexion
-mysqli_close($conexion);
+mysqli_close($conn);
 
 
 

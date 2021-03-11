@@ -1,9 +1,9 @@
 <?php require_once "views/parte_superior.php"?>
 <?php
-    include 'bd/conexion.php';
+    include 'db/conexion.php';
     
     
-    $query=mysqli_query($conexion,"SELECT ID_CLIENTE, NOMBRE FROM clientes");
+    $query=mysqli_query($conn,"SELECT ID_CLIENTE, NOMBRE FROM clientes");
 ?>
 <!-- INICIO FORMULARIO HTML -->
 

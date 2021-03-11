@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="email">Email:</label>
-                        <input type="text" name="email"  class="form-control" placeholder="" value="" required>
+                        <input type="email" name="email"  class="form-control" placeholder="" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>

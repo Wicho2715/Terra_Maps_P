@@ -1,6 +1,6 @@
 <?php
 
-include ("../bd/conexion.php"); 
+include ("../db/conexion.php"); 
 
     $motivo = $_POST["motivo"];
     $exp_sector = $_POST["exp_sector"];
@@ -24,7 +24,7 @@ VALUES ('ETAPA 1', '$motivo', '$exp_sector', '$exptecno', '$edificios', '$conoci
 
 //Ejecutar consulta
 
-$res = mysqli_query($conexion, $inante);
+$res = mysqli_query($conn, $inante);
 if (!$res){
     echo '<script>
          alert("Error al guardar informacion");
@@ -40,7 +40,7 @@ if (!$res){
  }
 
 //cerrar conexion
-mysqli_close($conexion);
+mysqli_close($conn);
 
 
 

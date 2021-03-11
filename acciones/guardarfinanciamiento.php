@@ -1,7 +1,7 @@
 <?php
 
 
-include ("../bd/conexion.php"); 
+include ("../db/conexion.php"); 
 
 $inversion = $_POST["inversion"];
 $nomf = $_POST['nomf'];
@@ -15,7 +15,7 @@ VALUES ('ETAPA 3', '$inversion', '$nomf', '$tipof', '$solvencia', '$opcre', '$es
 
 //Ejecutar consulta
 
-$res = mysqli_query($conexion, $insert2);
+$res = mysqli_query($conn, $insert2);
 if (!$res){
    echo '<script>
         alert("Error al guardar informacion");
@@ -33,7 +33,7 @@ else{
 //ya funciona NO MOVER//
 
 //cerrar conexion
-mysqli_close($conexion);
+mysqli_close($conn);
 
 
 ?>
