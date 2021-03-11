@@ -8,7 +8,7 @@
     <script src="vendor/pooper/pooper.min.js"></script>
     <script src="vendor/plugins/sweetalert2/sweetalert2.all.min.js"></script>
 <?php
-require 'conexion.php';
+require 'db/conexion.php';
 session_start();
 
 $usuario= $_POST['usuario'];
@@ -26,11 +26,13 @@ if($resultado= mysqli_fetch_array($consulta)){
 
 }*/
 $query= "SELECT * FROM login WHERE USUARIO= '$usuario'";
-if($result=mysqli_query($conexion, $query)){
+if($result=mysqli_query($conn, $query)){
   while($row= $result->fetch_assoc()){
-    $password_dec= $row['PASSWORD'];
+    $id= $row['ID_LOGIN'];
     $nombre= $row['NOMBRE'];
-    $apellido_p= $row['APELLIDO'];
+    $apellido= $row['APELLIDO'];
+    $password_dec= $row['PASSWORD'];
+    $usuario= $row['USUARIO'];
     $password_decifrada= password_verify($password, $password_dec);
   }
 
@@ -51,13 +53,20 @@ if($result=mysqli_query($conexion, $query)){
   }
 
 $consulta= "SELECT * FROM login WHERE USUARIO= '$usuario'";
-$resultado= mysqli_query($conexion, $consulta);
+$resultado= mysqli_query($conn, $consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas > 0  && $password_decifrada== $password){
-  $_SESSION['username']= $usuario;
+  $_SESSION['usuario']= $usuario;
   $_SESSION['nombre']= $nombre;
   $_SESSION['apellido']= $apellido;
+  $_SESSION['id']= $id;
+  $ip= $_SERVER['SERVER_ADDR'];
+  $query= "INSERT INTO sesions(IP, ID_LOGIN) VALUES ('$ip', '$id')";
+  if($resultado=mysqli_query($conn, $query)){
+
+
+  }
   ?>
   <script type="text/javascript">
   swal.fire({
@@ -91,7 +100,7 @@ if($filas > 0  && $password_decifrada== $password){
 
 }
 mysqli_free_result($resultado);
-mysqli_close($conexion);
+mysqli_close($conn);
  ?>
 
 

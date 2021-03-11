@@ -3,9 +3,8 @@ require 'db/conexion.php';
 $nombre= $_POST['nombre'];
 $apellido= $_POST['apellido'];
 $usuario= $_POST['usuario'];
-$password= $_POST['password'];
-$conf_password= $_POST['conf_password'];
-
+$id= $_SESSION['id'];
+$usuariog= $_SESSION['usuario'];
 ?>
 <html>
   <head>
@@ -16,56 +15,45 @@ $conf_password= $_POST['conf_password'];
     <script src="vendor/jquery/jquery.easing-3.5.1.min.js"></script>
     <script src="vendor/pooper/pooper.min.js"></script>
     <script src="vendor/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="codigo_inicio_sesion.js"></script>
 <?php
 
 $consulta= "SELECT * FROM login WHERE USUARIO= '$usuario'";
 $resultado= mysqli_query($conn, $consulta);
 $filas=mysqli_num_rows($resultado);
-if($filas > 0){?>
-      <script type="text/javascript">
-      swal.fire({
-        title: "Error!",
-        text: 'El usuario ya existe',
-        icon: "error",
-        button: "OK!",
-      }).then((result)=>{
-        if(result.value){
-          window.location="registrar_usuario.php";
-        }
-      });
-      </script>
+if ($usuariog != $usuario) {
+  if($filas > 0){?>
+        <script type="text/javascript">
+        swal.fire({
+          title: "Error!",
+          text: 'El usuario ya existe',
+          icon: "error",
+          button: "OK!",
+        }).then((result)=>{
+          if(result.value){
+            window.location="perfil.php";
+          }
+        });
+        </script>
 
-<?php die();
+  <?php die();
+  }
 }
-if($password != $conf_password){ ?>
-  <script type="text/javascript">
-  swal.fire({
-    title: "Error!",
-    text: 'Las contraseñas no coinciden',
-    icon: "error",
-    button: "Ok!",
-  }).then((result)=>{
-    if(result.value){
-      window.location="registrar_usuario.php";
-    }
-  });
-  </script>
-<?php die();
-}
-$password_cifrada= password_hash($password, PASSWORD_DEFAULT);
-$query= "INSERT INTO login(NOMBRE, APELLIDO, USUARIO, PASSWORD) VALUES ('$nombre', '$apellido', '$usuario', '$password_cifrada')";
+
+$query= "UPDATE login SET NOMBRE= '$nombre', APELLIDO= '$apellido', USUARIO= '$usuario' WHERE ID_LOGIN= '$id'";
 if($resultado=mysqli_query($conn, $query)){
+  $_SESSION['usuario']= $usuario;
+  $_SESSION['nombre']= $nombre;
+  $_SESSION['apellido']= $apellido;
   ?>
   <script type="text/javascript">
   swal.fire({
     title: "Guardado",
-    text: 'Se guardo el usuario',
+    text: 'Perfil actualizado',
     icon: "success",
     button: "Aceptar",
   }).then((result)=>{
     if(result.value){
-      window.location="inicio_sesion.php";
+      window.location="index.php";
     }
   });
   </script>
