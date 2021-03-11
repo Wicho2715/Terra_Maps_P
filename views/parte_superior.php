@@ -1,6 +1,13 @@
-
+<?php
+session_start();
+$usuario= $_SESSION['usuario'];
+if($usuario == null || $usuario= ''){
+    header("Location:inicio_sesion.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="utf-8">
@@ -23,13 +30,12 @@
     <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.min.css">
     <!-- datables estilos 4 CSS-->
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
-    <link href="css/estilos.css" rel="stylesheet">
+
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    
+
 
 </head>
 
@@ -104,24 +110,16 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Crear cuenta</span>
-                </a>
+
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Pestañas de logueo:</h6>
-                        <a class="collapse-item" href="registrar_usuario.php">Registro</a>
 
                         <div class="collapse-divider"></div>
 
@@ -252,7 +250,11 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                 
+                                  <?php
+                                    $nombre= $_SESSION['nombre'];
+                                    $apellido= $_SESSION['apellido'];
+                                    echo "$nombre ";
+                                  ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
@@ -260,7 +262,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="perfil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>

@@ -5,7 +5,7 @@
 <header id="header"> Etapa 3 Financiamiento</header>
     <div clas="abs-center">
     
-<form method="POST" action="acciones/guardarfinanciamiento.php" class="needs-validation" novalidate>
+<form action="acciones/guardarfinanciamiento.php"  method="POST" class="needs-validation" novalidate>
     <div class="form-row mt-5">
 
     
@@ -25,7 +25,7 @@
     <div class="form-row">
         <div class="col-md-12 mb-12">
             <label for="validartipof">Tipo de financiemiento *</label>
-            <input type="text" class="form-control" name="tipof"  >
+            <input type="text" class="form-control" name="tipof"  required>
         </div>
     </div>
 

@@ -28,13 +28,15 @@
 
 <header id="header"> Etapa 1 Antecedentes</header>
     <div clas="abs-center">
-<form method="post" action="acciones/guardarantecedentes.php" class="needs-validation" novalidate>
+<form  action="acciones/guardarantecedentes.php" method="POST" class="needs-validation" novalidate>
     <div class="form-row mt-5">
     <div class="titulo"> --  Motivaci&oacute;n/Experiencia --</div>
     <br>
         <div class="col-md-12 mb-12">
             <label for="validarNombre">Motivo por el que contacto a Terra Maps<span class="red">*</span></label>
             <input type="text" class="form-control" id="Motivo" name="motivo" required>
+            <div class="valid-feedback">¡OK valido!</div>
+            <div class="invalid-feedback">Completar el campo.</div>
         </div>
     </div>
 
@@ -42,13 +44,19 @@
         <div class="col-md-12 mb-12">
             <label for="validarexp">Experiencia que tiene la empresa con el sector<span class="red">*</span></label>
             <input type="text" class="form-control" name="exp_sector"  required>
+            <div class="valid-feedback">¡OK valido!</div>
+            <div class="invalid-feedback">Completar el campo.</div>
         </div>
     </div>
 
+   
+
     <div class="form-row">
-        <div class="col-md-12 mb-12">
+        <div class="col-md-12 ">
             <label for="validartecno">Experiencia que tiene con los sistemas tecnol&oacute;gicos *</label>
-            <input type="text" class="form-control" name="exptecno" >
+            <input type="text" class="form-control" name="exptecno" required>
+            <div class="valid-feedback">¡OK valido!</div>
+            <div class="invalid-feedback">Completar el campo.</div>
         </div>
     </div>
 
@@ -58,29 +66,34 @@
             <label for="valiedificios">¿Cuenta con instalaciones o edificios?<span class="red">*</span></label>
             <br>
             <label class="checkbox-inline">
-                <input type="checkbox" name="edificios" value="opcion_1"> Si
+                <input type="checkbox" name="edificios" value="Si"> Si
             </label>
             <label class="checkbox-inline">
-                <input type="checkbox" name="edificios" value="opcion_2"> No
+                <input type="checkbox" name="edificios" value="No"> No
             </label>
+            <div class="valid-feedback">¡OK valido!</div>
+            <div class="invalid-feedback">Completar el campo.</div>
         </div>
 
     <div class="titulo"> --  Recursos Humanos --</div>
     <div class="form-row">
-        <div class="col-md-12 mb-12">
-            <label for="valicono">El personal a cargo cuenta con alguna  capacitaci&oacute;n*</label>
-            <input type="text" class="form-control"  name="conocimiento" >
+        <div class="col-md-12 ">
+            <label for="conocimiento">El personal a cargo cuenta con alguna  capacitaci&oacute;n</label>
+            <input type="text" class="form-control" name="conocimiento" required>
+            <div class="valid-feedback">¡OK valido!</div>
+            <div class="invalid-feedback">Completar el campo.</div>
         </div>
     </div>
+  
     <div class="form-row">
         <div class="col-md-5 mb-5">
         <label for="valiencargado">El encargado cuenta con experiencia sobre el tema*</label>
                 <br>
             <label class="checkbox-inline">
-                <input type="checkbox" value="1"  name="encargado" id="encargado1" OnChange="mostrar()"> Si
+                <input type="checkbox" value="Si"  name="encargado" id="encargado1" OnChange="mostrar()"> Si
             </label>
             <label class="checkbox-inline">
-                <input type="checkbox"  value="0"  name="encargado" id="encargado2" OnChange="mostrar()"> No
+                <input type="checkbox"  value="No"  name="encargado" id="encargado2" OnChange="mostrar()"> No
             </label>
         </div>
 
@@ -118,21 +131,20 @@
             <label for="valirinternet">Tipo de internet con el que cuenta<span class="red">*</span></label>
             <fieldset>
                         <label>
-                            <input type="radio" name="tipo" value="fo" > Fibra &oacute;ptica
+                            <input type="radio" name="tipo" value="Fibra óptica" > Fibra &oacute;ptica
                         </label>
                         <br>
                         <label>
-                            <input type="radio" name="tipo" value="sa"> Satelital
+                            <input type="radio" name="tipo" value="Satelital"> Satelital
                         </label>
                         <br>
                         <label>
-                            <input type="radio" name="tipo" value="ct"> Cable de tel&eacute;fono (RJ-11)
+                            <input type="radio" name="tipo" value="Cable de teléfono RJ-11"> Cable de tel&eacute;fono (RJ-11)
                         </label>
             </fieldset>
         </div>
     </div>
 
-    <div class="form-row mt-5">
     <div class="titulo"> --  Recursos econ&oacute;micos --</div>
     <br>
         <div class="col-md-12 mb-12">
@@ -150,7 +162,7 @@
                             <input type="radio" name="rpropios" value="Beneficios propios"> Beneficios guardados
                         </label>
                     </fieldset>
-        </div>
+        
     </div>
 
     <div class="form-row">

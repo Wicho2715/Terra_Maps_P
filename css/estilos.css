@@ -31,6 +31,10 @@ color: lightslategrey;
   max-height: 100% !important;
 }
 
+.abs-center .form-row #estado{
+  width: 50px;
+}
+
 /*
 .container .btn-primary{
   background: #0052D4;  
