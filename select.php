@@ -1,5 +1,5 @@
 <?php
-    include ("bd/conexion.php");
+    include ("db/conexion.php");
     
     
     $query=mysqli_query($conn,"SELECT ID_CLIENTE, NOMBRE FROM clientes");

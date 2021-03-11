@@ -36,7 +36,7 @@
         <div class="col-md-12 mb-12">
         <label for="valiobpro">Nombre del cliente:<span class="red">*</span></label>
         <br>
-        <select id="nomre">
+        <select class="form-control" name="nomre" > 
         <?php 
             while($datos = mysqli_fetch_array($query))
             {

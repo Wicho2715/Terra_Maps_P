@@ -1,6 +1,6 @@
 <?php
 
-include ("../bd/conexion.php"); 
+include ("../db/conexion.php"); 
 
   $nomproyec = $_POST["nomproyec"];
   $objetpro = $_POST["objetpro"];
