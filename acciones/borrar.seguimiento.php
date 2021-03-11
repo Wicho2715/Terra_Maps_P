@@ -1,7 +1,7 @@
 <?php
 
 include("../db/conexion.php");
-
+session_start();
 if(isset($_GET['ID_SEGUIMIENTO'])) {
   $id = $_GET['ID_SEGUIMIENTO'];
   $query = "DELETE FROM seguimiento WHERE ID_SEGUIMIENTO = $id";
