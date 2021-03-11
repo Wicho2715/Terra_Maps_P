@@ -249,12 +249,12 @@ if($usuario == null || $usuario= ''){
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<<<<<<< HEAD
-
-                               
 
 
-=======
+
+
+
+
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                   <?php
                                     $nombre= $_SESSION['nombre'];
@@ -262,7 +262,7 @@ if($usuario == null || $usuario= ''){
                                     echo "$nombre ";
                                   ?>
                                 </span>
->>>>>>> b45930e1885a51435e1096198ec7fd0977ec5948
+
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>

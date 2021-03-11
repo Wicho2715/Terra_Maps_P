@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> b45930e1885a51435e1096198ec7fd0977ec5948
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,86 +24,6 @@
 
 <body class="bg-gradient-primary">
 
-<<<<<<< HEAD
-
-
-<!--Inicio-->
-<div class = "container">
-    <h1></h1>
-
-
-    <div class="container">
-
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-
-                <div class="row">
-
-                    <div class="col-lg-5 d-none d-lg-block"><br> <br> <br><center><img src="img/nuevo_usuario.png"></center></div>
-                    <div class="col-lg-7">
-
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Crea una cuenta!</h1>
-                            </div>
-
-                            <form class="user">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Nombre(s)">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-
-                            <form class="user" action="guardar_usuario.php" method="post">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nombre" name="nombre"
-                                            placeholder="Nombre(s)">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="apellido" name="apellido"
-
-                                            placeholder="Apellido">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Usuario">
-                                    <input type="email" class="form-control form-control-user" id="usuario" name="usuario"
-                                        placeholder="Email">
-
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-
-                                            id="exampleInputPassword" placeholder="Contraseña">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Confirmar contraseña">
-                                    </div>
-                                </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Registrar
-                                </a>
-                                <hr>
-
-
-                            </form>
-                         
-                        </div>
-                    
-                </div>
-            </div>
-        </div>
-
-    </div>
-=======
   <div class="container">
 
       <div class="card o-hidden border-0 shadow-lg my-5">
@@ -181,16 +97,8 @@
               </div>
           </div>
       </div>
->>>>>>> b45930e1885a51435e1096198ec7fd0977ec5948
 
 
 </body>
 
-<<<<<<< HEAD
-<!--Fin-->
-
-
-
-=======
 </html>
->>>>>>> b45930e1885a51435e1096198ec7fd0977ec5948
