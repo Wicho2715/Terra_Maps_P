@@ -40,17 +40,21 @@ if (isset($_POST['modificarpu'])) {
                 <h3 class="text-white">Modificar Publicidad</h3>
             </div>
     <div class="card card-body">
-      <form action="editar.publicidad.php?ID_PUBLICIDAD=<?php echo $_GET['ID_PUBLICIDAD']; ?>" method="POST">
+      <form action="editar.publicidad.php?ID_PUBLICIDAD=<?php echo $_GET['ID_PUBLICIDAD']; ?>" method="POST" class="needs-validation" novalidate>
       
         <div class="form-group">
             <div class="row">
               <div class="col-md-6">
                 <label for="nombrepu">Nombre Publicidad:</label> 
-                <input name="nombrepu" type="text" class="form-control" value="<?php echo $nombrepu;?>">
+                <input name="nombrepu" type="text" class="form-control" placeholder="" required value="<?php echo $nombrepu;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
                 <label for="tipopu">Tipo:</label> 
-                <input name="tipopu" type="text" class="form-control" value="<?php echo $tipopu; ?>">
+                <input name="tipopu" type="text" class="form-control" placeholder="" required value="<?php echo $tipopu; ?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div> 
             </div> 
         </div>
@@ -58,7 +62,9 @@ if (isset($_POST['modificarpu'])) {
           <div class="row">
               <div class="col-md-6">
                 <label for="descripcion">Descripcion:</label> 
-                <input name="descripcion" type="text" class="form-control" value="<?php echo $descripcion;?>">
+                <input name="descripcion" type="text" class="form-control" placeholder="" required value="<?php echo $descripcion;?>">
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
               </div>
           </div>
         </div>

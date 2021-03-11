@@ -1,9 +1,6 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -26,9 +23,14 @@ session_start();
     <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.min.css">
     <!-- datables estilos 4 CSS-->
     <link rel="stylesheet" type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
-
+    <link href="css/estilos.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<<<<<<< HEAD
 
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+>>>>>>> a611d20d7ae2878328cd74262fc958516d1ff67b
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -253,13 +255,20 @@ session_start();
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<<<<<<< HEAD
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+<<<<<<< HEAD
                                   <?php
                                     $nombre= $_SESSION['nombre'];
                                     $apellido= $_SESSION['apellido'];
                                     echo "$nombre";
                                   ?>
+=======
+                                 
+>>>>>>> a611d20d7ae2878328cd74262fc958516d1ff67b
                                 </span>
+=======
+>>>>>>> 4af5fdd09d7a9cb055ec2471dadd7fea4088bb0e
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
