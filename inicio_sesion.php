@@ -44,10 +44,12 @@
                                     </div>
                                     <form class="user" id="iniciar" action="validar_usuario.php" method="post">
                                         <div class="form-group">
+                                          <label for="nombres">Email</label>
                                             <input type="text" class="form-control form-control-user"
-                                                id="usuario" name="usuario" required placeholder="Usuario">
+                                                id="usuario" name="usuario" required placeholder="Email">
                                         </div>
                                         <div class="form-group">
+                                          <label for="password">Contraseña:</label>
                                             <input type="password" class="form-control form-control-user"
                                                 id="password" name="password" required placeholder="Contraseña">
                                         </div>

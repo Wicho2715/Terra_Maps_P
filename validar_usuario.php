@@ -28,10 +28,11 @@ if($resultado= mysqli_fetch_array($consulta)){
 $query= "SELECT * FROM login WHERE USUARIO= '$usuario'";
 if($result=mysqli_query($conn, $query)){
   while($row= $result->fetch_assoc()){
-    $password_dec= $row['PASSWORD'];
     $id= $row['ID_LOGIN'];
     $nombre= $row['NOMBRE'];
-    $apellido_p= $row['APELLIDO'];
+    $apellido= $row['APELLIDO'];
+    $password_dec= $row['PASSWORD'];
+    $usuario= $row['USUARIO'];
     $password_decifrada= password_verify($password, $password_dec);
   }
 
@@ -56,10 +57,10 @@ $resultado= mysqli_query($conn, $consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas > 0  && $password_decifrada== $password){
-  $_SESSION['username']= $usuario;
+  $_SESSION['usuario']= $usuario;
   $_SESSION['nombre']= $nombre;
-  $_SESSION['id']= $id;
   $_SESSION['apellido']= $apellido;
+  $_SESSION['id']= $id;
   $ip= $_SERVER['SERVER_ADDR'];
   $query= "INSERT INTO sesions(IP, ID_LOGIN) VALUES ('$ip', '$id')";
   if($resultado=mysqli_query($conn, $query)){
