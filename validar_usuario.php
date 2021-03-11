@@ -99,7 +99,6 @@ if($filas > 0  && $password_decifrada== $password){
   //header("Location:index.php");
 
 }
-mysqli_free_result($resultado);
 mysqli_close($conn);
  ?>
 

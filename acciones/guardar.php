@@ -1,6 +1,6 @@
 <?php
 include("../db/conexion.php");
-
+session_start();
 if(isset($_POST['guardar'])){
     $nombre = $_POST['nombres'];
     $cargo = $_POST['cargo'];

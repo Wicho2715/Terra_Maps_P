@@ -87,7 +87,6 @@ if($resultado=mysqli_query($conn, $query)){
   </script>
   <?php
 }
-mysqli_free_result($resultado);
 mysqli_close($conn);
 ?>
 

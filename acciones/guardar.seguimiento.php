@@ -1,6 +1,6 @@
 <?php
 include("../db/conexion.php");
-
+session_start();
 if(isset($_POST['guardarse'])){
     $fechac = $_POST['fechac'];
     $estadoc = $_POST['estadoc'];
