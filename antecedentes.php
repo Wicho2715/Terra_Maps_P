@@ -1,4 +1,8 @@
 <?php require_once "views/parte_superior.php"?>
+<?php
+    include 'db/conexion.php';
+  
+?>
 
 <!-- INICIO FORMULARIO HTML -->
 <script type="text/javascript">
@@ -17,21 +21,35 @@
 
 <div class="container-fluid">
     <div id="mycontainer" class="container">
-    <?php if (isset($_SESSION['message'])) { ?>
-					<div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-						<?= $_SESSION['message']?>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				<?php session_unset(); } ?>
-
-<header id="header"> Etapa 1 Antecedentes</header>
+<header id="header"> Etapa 2 Antecedentes</header>
     <div clas="abs-center">
 <form  action="acciones/guardarantecedentes.php" method="POST" class="needs-validation" novalidate>
-    <div class="form-row mt-5">
+<div class="titulo"> --  Proyecto --</div>
+    
+<div class="row">
+        <div class="col-md-12 mb-12">
+        <br>
+        <select class="form-control" name="proyec" id="" required > 
+            <option value="">Proyecto</option>
+        <?php
+            $v = mysqli_query($conn,"SELECT * FROM proyecto_inicial"); 
+            while($clientes = mysqli_fetch_row($v))
+            {
+        ?>
+            <option value="<?php echo $clientes[0] ?>"> <?php echo $clientes[1]?> </option>
+        <?php
+            }
+    
+        ?>
+
+    </select>
+        </div>
+    </div>
+    
+
     <div class="titulo"> --  Motivaci&oacute;n/Experiencia --</div>
     <br>
+    <div class="form-row">
         <div class="col-md-12 mb-12">
             <label for="validarNombre">Motivo por el que contacto a Terra Maps<span class="red">*</span></label>
             <input type="text" class="form-control" id="Motivo" name="motivo" required>
@@ -185,7 +203,7 @@
     </div>
     
     <div class="form-group">
-        <label for="estado">El estado de la etapa 1 esta:<span class="red">*</span></label>
+        <label for="estado">El estado de la etapa 2 esta:<span class="red">*</span></label>
         <input  class=" btn btn-2" type="text" name="estado1" id="estado1" value="FINALIZDO" readonly>
     </div>
 

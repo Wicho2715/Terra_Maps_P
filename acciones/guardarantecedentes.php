@@ -2,6 +2,7 @@
 
 include ("../db/conexion.php"); 
 
+    $proyec = $_POST["proyec"];
     $motivo = $_POST["motivo"];
     $exp_sector = $_POST["exp_sector"];
     $exptecno = $_POST["exptecno"];
@@ -19,8 +20,8 @@ include ("../db/conexion.php");
     $estado1 = $_POST['estado1'];
 
     //Consulta para insertar
-$inante = "INSERT INTO antecedentes(ETAPA,MOTIVO_CONTACTO,EXPE_EMP,EXPE_TECNO,INSTA_EDI,PER_TEMA,EXP_ENCA,ANO_EXP,SISTEMA_OPERATIVO,PROCESADOR,RAM,ALMACEN,TI_INTERNET,RE_PROPIOS,RE_AJENOS,ESTADO_ANTECEDENTES) 
-VALUES ('ETAPA 1', '$motivo', '$exp_sector', '$exptecno', '$edificios', '$conocimiento', '$encargado', '$anos', '$so', '$procesador', '$ram', '$alma', '$tipo', '$rpropios', '$rejenos','$estado1')";
+$inante = "INSERT INTO antecedentes(ID_PROYECTO,ETAPA,MOTIVO_CONTACTO,EXPE_EMP,EXPE_TECNO,INSTA_EDI,PER_TEMA,EXP_ENCA,ANO_EXP,SISTEMA_OPERATIVO,PROCESADOR,RAM,ALMACEN,TI_INTERNET,RE_PROPIOS,RE_AJENOS,ESTADO_ANTECEDENTES) 
+VALUES ('$proyec', 'ETAPA 2', '$motivo', '$exp_sector', '$exptecno', '$edificios', '$conocimiento', '$encargado', '$anos', '$so', '$procesador', '$ram', '$alma', '$tipo', '$rpropios', '$rejenos','$estado1')";
 
 //Ejecutar consulta
 

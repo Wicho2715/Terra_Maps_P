@@ -4,7 +4,7 @@ include ("../db/conexion.php");
 
   $nomproyec = $_POST["nomproyec"];
   $objetpro = $_POST["objetpro"];
-  $nomre = $_POST["nomre"];
+  $cliente = $_POST["cliente"];
   $puesto = $_POST["puesto"];
   $telefono = $_POST["telefono"];
   $planmkt = $_POST["planmkt"];
@@ -13,8 +13,8 @@ include ("../db/conexion.php");
   $estado2 = $_POST["estado2"];
 
 //Consulta para insertar
-$insert = "INSERT INTO proyecto_inicial(ETAPA2,NOMBRE_PROYECTO,OBJETIVO,NOMBRE_ENCARGADO,PUESTO,TELEFONO,ESTRATEGIA_MKT,PLAN_ESTRATEGICO,RE_ACTUAL,ESTADO_PROYECTO) 
-VALUES ('ETAPA 2','$nomproyec','$objetpro','$nomre','$puesto',$telefono,'$planmkt','$plane','$recursoh','$estado2')";
+$insert = "INSERT INTO proyecto_inicial(NOMBRE_PROYECTO,ETAPA2,OBJETIVO,ID_CLIENTE,PUESTO,TELEFONO,ESTRATEGIA_MKT,PLAN_ESTRATEGICO,RE_ACTUAL,ESTADO_PROYECTO) 
+VALUES ('$nomproyec','ETAPA 1', '$objetpro','$cliente','$puesto','$telefono','$planmkt','$plane','$recursoh','$estado2')";
 
 //Ejecutar consulta
 

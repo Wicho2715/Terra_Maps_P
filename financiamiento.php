@@ -1,4 +1,8 @@
 <?php require_once "views/parte_superior.php"?>
+<?php
+    include 'db/conexion.php';
+  
+?>
 <!-- INICIO FORMULARIO HTML -->
 
 <div class="container">
@@ -6,9 +10,28 @@
     <div clas="abs-center">
     
 <form action="acciones/guardarfinanciamiento.php"  method="POST" class="needs-validation" novalidate>
-    <div class="form-row mt-5">
-
+<div class="titulo"> --  Proyecto --</div>
+    <div class="row">
+        <div class="col-md-12 mb-12">
+        <br>
+        <select class="form-control" name="proyecto" id="" required > 
+            <option value="">Proyecto</option>
+        <?php
+            $v = mysqli_query($conn,"SELECT * FROM proyecto_inicial"); 
+            while($proyectos = mysqli_fetch_row($v))
+            {
+        ?>
+            <option value="<?php echo $proyectos[0] ?>"> <?php echo $proyectos[1]?> </option>
+        <?php
+            }
     
+        ?>
+
+    </select>
+        </div>
+    </div>
+    <div class="form-row ">
+  
         <div class="col-md-4 mb-12">
             <label for="validarinver">Cual es su monto de inversión inicial<span class="red">*</span></label>
             <input type="text" class="form-control" name="inversion"  required>

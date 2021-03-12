@@ -8,7 +8,7 @@
 <!-- INICIO FORMULARIO HTML -->
 
 <div class="container">
-<header id="header"> Etapa 2 Proyecto Inicial</header>
+<header id="header"> Etapa 1 Proyecto Inicial</header>
     <div clas="abs-center">
     
 <form action="acciones/guardarproyectoinicial.php" method="POST" class="needs-validation" novalidate >
@@ -19,7 +19,7 @@
             <label for="validarNombrepro">Nombre del proyecto:<span class="red">*</span></label>
             <input type="text" class="form-control"  name="nomproyec" required>
             <div class="valid-feedback">¡OK valido!</div>
-                        <div class="invalid-feedback">Completar el campo.</div>
+            <div class="invalid-feedback">Completar el campo.</div>
         </div>
     </div>
 
@@ -36,12 +36,14 @@
         <div class="col-md-12 mb-12">
         <label for="valiobpro">Nombre del cliente:<span class="red">*</span></label>
         <br>
-        <select class="form-control" name="nomre" > 
-        <?php 
-            while($datos = mysqli_fetch_array($query))
+        <select class="form-control" name="cliente" id="" required > 
+            <option value="">Cliente</option>
+        <?php
+            $v = mysqli_query($conn,"SELECT * FROM clientes"); 
+            while($clientes = mysqli_fetch_row($v))
             {
         ?>
-            <option value="<?php echo $datos['ID_CLIENTE']?>"> <?php echo $datos['NOMBRE']?> </option>
+            <option value="<?php echo $clientes[0] ?>"> <?php echo $clientes[1]?> </option>
         <?php
             }
     
@@ -63,7 +65,7 @@
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="telefono">Telefono:</label>
-            <input type="text" name="telefono"  class="form-control" placeholder="" value="" required>
+            <input type="number" name="telefono"  class="form-control" placeholder="" value="" required>
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -100,7 +102,7 @@
 
  
     <div class="form-group">
-        <label for="estado">El estado de la etapa 2 esta:<span class="red">*</span></label>
+        <label for="estado">El estado de la etapa 1 esta:<span class="red">*</span></label>
         <input  class=" btn btn-2" type="text" name="estado2" value="FINALIZDO" readonly>
     </div>
    
