@@ -38,8 +38,6 @@ if (isset($_POST['modificar'])) {
 
   $query = "UPDATE contacto set TIPO_CONTACTO = '$tipoc', DESTINATARIO = '$destinatario', ASUNTO = '$asunto', RESUMEN = '$resumen', FECHA_PC = '$fechac', NOMBRE_CONTACTO = '$nombrec', ACUERDO = '$acuerdo' WHERE ID_CONTACTO = $id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Informacion Actualizada Correctamente';
-  $_SESSION['message_type'] = 'primary';
   header('Location: contacto.php');
 }
 ?>

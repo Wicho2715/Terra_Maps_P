@@ -2,16 +2,6 @@
 <?php require_once "views/parte_superior.php"?>
 	
 <div class="container">
-
-				<?php if (isset($_SESSION['message'])) { ?>
-					<div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-						<?= $_SESSION['message']?>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				<?php session_unset(); } ?>
-
         <div class="card">
             <div class="card-header bg-info">
                 <h3 class="text-white">Contactos</h3>
@@ -20,7 +10,7 @@
 				<form action="acciones/guardar.contacto.php" method="POST" class="needs-validation" novalidate>
 				<div class="row">
         			<div class="col-lg-12">
-            			<button type="submit" class="btn btn-success" name="guardar">Guardar</button>
+            			<button type="submit" class="btn btn-success" name="guardarc">Guardar</button>
         			</div>
     			</div>
 				<br>

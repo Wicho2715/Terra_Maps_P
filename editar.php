@@ -35,8 +35,6 @@ if (isset($_POST['modificar'])) {
 
   $query = "UPDATE clientes set NOMBRE = '$nombre', CARGO = '$cargo', DEPENDENCIA = '$dependencia', EMAIL = '$email', MOVIL = '$movil', ESTADO = '$estado' WHERE ID_CLIENTE = $id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Informacion Actualizada Correctamente';
-  $_SESSION['message_type'] = 'primary';
   header('Location: clientes.php');
 }
 ?>

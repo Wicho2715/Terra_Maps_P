@@ -1,7 +1,7 @@
 <?php
 include("../db/conexion.php");
-session_start();
-if(isset($_POST['guardar'])){
+
+if(isset($_POST['guardarc'])){
     $tipoc = $_POST['tipocontacto'];
     $destinatario = $_POST['destinatario'];
     $asunto = $_POST['asunto'];
@@ -17,7 +17,5 @@ if(isset($_POST['guardar'])){
     if(!$resultado){
         die("Query failed");
     }
-    $_SESSION['message'] = 'Datos guardados correctamente';
-    $_SESSION['message_type'] = 'success';
     header('Location: ../contacto.php');
 }

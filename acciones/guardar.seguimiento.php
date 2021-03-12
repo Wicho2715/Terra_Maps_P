@@ -1,6 +1,6 @@
 <?php
 include("../db/conexion.php");
-session_start();
+
 if(isset($_POST['guardarse'])){
     $fechac = $_POST['fechac'];
     $estadoc = $_POST['estadoc'];
@@ -12,7 +12,6 @@ if(isset($_POST['guardarse'])){
     if(!$resultado){
         die("Query failed");
     }
-    $_SESSION['message'] = 'Datos guardados correctamente';
-    $_SESSION['message_type'] = 'success';
+
     header('Location: ../seguimiento.php');
 }

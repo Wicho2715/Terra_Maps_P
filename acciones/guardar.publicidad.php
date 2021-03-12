@@ -1,6 +1,6 @@
 <?php
 include("../db/conexion.php");
-session_start();
+
 if(isset($_POST['guardarpu'])){
     $nombrepu = $_POST['nombrepu'];
     $tipopu = $_POST['tipopu'];
@@ -12,7 +12,5 @@ if(isset($_POST['guardarpu'])){
     if(!$resultado){
         die("Query failed");
     }
-    $_SESSION['message'] = 'Datos guardados correctamente';
-    $_SESSION['message_type'] = 'success';
     header('Location: ../contacto.php');
 }

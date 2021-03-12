@@ -27,8 +27,6 @@ if (isset($_POST['modificarpu'])) {
 
   $query = "UPDATE publicidad set NOMBRE_PU = '$nombrepu', TIPO = '$tipopu', DESCRIPCION = '$descripcion' WHERE ID_PUBLICIDAD = $id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Informacion Actualizada Correctamente';
-  $_SESSION['message_type'] = 'primary';
   header('Location: contacto.php');
 }
 ?>

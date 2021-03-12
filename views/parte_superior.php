@@ -253,9 +253,9 @@ if($usuario == null || $usuario= ''){
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                   <?php
-                                    $nombre= $_SESSION['nombre'];
+                                    $nombrec= $_SESSION['nombre'];
                                     $apellido= $_SESSION['apellido'];
-                                    echo "$nombre ";
+                                    echo "$nombrec ";
                                   ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
