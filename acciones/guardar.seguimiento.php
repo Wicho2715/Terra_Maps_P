@@ -10,8 +10,14 @@ if(isset($_POST['guardarse'])){
     $query = "INSERT INTO seguimiento(FECHA, ESTADO_CITA, ID_CONTACTO) VALUES ('$fechac', '$estadoc', '$idcontacto')";
     $resultado = mysqli_query($conn, $query);
     if(!$resultado){
-        die("Query failed");
-    }
-
-    header('Location: ../seguimiento.php');
+        echo '<script>
+            alert("Error al guardar informacion");
+            window.history.go(-1);
+            </script>' ;
+    }else{
+        echo '<script>
+        alert("Informacion gurdada correctamente");
+        window.history.go(-1);
+        </script>' ; 
+     } 
 }

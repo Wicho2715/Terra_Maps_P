@@ -11,9 +11,14 @@ if(isset($_POST['guardar'])){
     
     $query = "INSERT INTO clientes(NOMBRE, CARGO, DEPENDENCIA, EMAIL, MOVIL, ESTADO) VALUES ('$nombre', '$cargo', '$dependencia', '$email', '$movil', '$estado')";
     $resultado = mysqli_query($conn, $query);
-    if(!$resultado){
-        die("Query failed");
-    }
-
-    header('Location: ../clientes.php');
+    echo '<script>
+        alert("Error al guardar informacion");
+        window.history.go(-1);
+        </script>' ;
+    }else{
+        echo '<script>
+        alert("Informacion gurdada correctamente");
+        window.history.go(-1);
+        </script>' ; 
+    } 
 }

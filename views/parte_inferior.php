@@ -49,6 +49,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+ 
     <script src="interfaces/clientes.js"></script>
     <script src="interfaces/contacto.js"></script>
     <script src="interfaces/publicidad.js"></script>

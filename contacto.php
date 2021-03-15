@@ -1,6 +1,10 @@
-<?php include("db/conexion.php"); ?>
+
 <?php require_once "views/parte_superior.php"?>
-	
+<?php include("db/conexion.php"); 
+$query=mysqli_query($conn,"SELECT ID_CLIENTE, NOMBRE FROM clientes");
+
+$query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
+?>	
 <div class="container">
         <div class="card">
             <div class="card-header bg-info">
@@ -17,13 +21,13 @@
 				<div class="row">
                     <div class="col-md-6">
                         <label for="tipocontacto">Tipo de contacto:</label>
-                        <input type="text" name="tipocontacto"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="tipocontacto"  class="form-control" placeholder="Medio de contacto" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="destinatario">Destinatario:</label>
-                        <input type="text" name="destinatario"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="destinatario"  class="form-control" placeholder="Direccion de correo o telefono movil" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
@@ -31,13 +35,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="asunto">Asunto:</label>
-                        <input type="text" name="asunto"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="asunto"  class="form-control" placeholder="Motivo del contacto" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="resumen">Resumen:</label>
-                        <input type="text" name="resumen"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="resumen"  class="form-control" placeholder="Descripcion breve de los temas tratados" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
@@ -45,13 +49,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="fechac">Fecha del proximo Contacto:</label>
-                        <input type="date" name="fechac"  class="form-control" placeholder="" value="" required>
+                        <input type="date" name="fechac"  class="form-control" placeholder="Fecha de contacto proximo" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
-                        <label for="nombrec">Nombre del Contacto:</label>
-                        <input type="text" name="nombrec"  class="form-control" placeholder="" value="" required>
+                        <label for="nombrecs">Nombre del Contacto:</label>
+                        <input type="text" name="nombrecs"  class="form-control" placeholder="Nombre de la persona que emitio respuesta" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
@@ -59,23 +63,43 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="acuerdo">Acuerdos:</label>
-                        <input type="text" name="acuerdo"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="acuerdo"  class="form-control" placeholder="Acuerdos a los que se llego durante el contacto" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
-                        <label for="idcliente">ID del Cliente:</label>
-                        <input type="text" name="idcliente"  class="form-control" placeholder="" value="" required>
-                        <div class="valid-feedback">¡OK valido!</div>
-                        <div class="invalid-feedback">Completar el campo.</div>
+                        <label for="idcliente">Nombre del Cliente:</label>
+                        <select class="form-control" name="idcliente" id="" required > 
+                            <option value="">Nombre del Cliente</option>
+                        <?php
+                            $v = mysqli_query($conn,"SELECT * FROM clientes"); 
+                            while($cliente = mysqli_fetch_row($v))
+                            {
+                        ?>
+                            <option value="<?php echo $cliente[0] ?>"> <?php echo $cliente[1]?> </option>
+                        <?php
+                            }
+                    
+                        ?>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="idpublicidad">ID de la Publicidad:</label>
-                        <input type="text" name="idpublicidad"  class="form-control" placeholder="" value="" required>
-                        <div class="valid-feedback">¡OK valido!</div>
-                        <div class="invalid-feedback">Completar el campo.</div>
+                        <label for="idpublicidad">Nombre de la Publicidad:</label>
+                        <select class="form-control" name="idpublicidad" id="" required > 
+                            <option value="">Nombre de la publicidad</option>
+                        <?php
+                            $v = mysqli_query($conn,"SELECT * FROM publicidad"); 
+                            while($publicidad = mysqli_fetch_row($v))
+                            {
+                        ?>
+                            <option value="<?php echo $publicidad[0] ?>"> <?php echo $publicidad[1]?> </option>
+                        <?php
+                            }
+                    
+                        ?>
+                        </select>
                      </div>  
                 </div>
 				</form>	
@@ -156,13 +180,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label for="nombrepu">Nombre de la Publicidad:</label>
-                            <input type="text" name="nombrepu"  class="form-control" placeholder="" value="" required>
+                            <input type="text" name="nombrepu"  class="form-control" placeholder="Nombre exacto de la publicidad" value="" required>
                             <div class="valid-feedback">¡OK valido!</div>
                             <div class="invalid-feedback">Completar el campo.</div>
                         </div>
                         <div class="col-md-6">
                             <label for="tipopu">Tipo:</label>
-                            <input type="text" name="tipopu"  class="form-control" placeholder="" value="" required>
+                            <input type="text" name="tipopu"  class="form-control" placeholder="Que tipo de publicidad es" value="" required>
                             <div class="valid-feedback">¡OK valido!</div>
                             <div class="invalid-feedback">Completar el campo.</div>
                         </div>
@@ -170,7 +194,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label for="descripcion">Descripcion:</label>
-                            <input type="text" name="descripcion"  class="form-control" placeholder="" value="" required>
+                            <input type="text" name="descripcion"  class="form-control" placeholder="Descripcion y caracteristicas de la publicidad" value="" required>
                             <div class="valid-feedback">¡OK valido!</div>
                             <div class="invalid-feedback">Completar el campo.</div>
                         </div>

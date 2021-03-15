@@ -10,7 +10,14 @@ if(isset($_POST['guardarpu'])){
     $query = "INSERT INTO publicidad(NOMBRE_PU, TIPO, DESCRIPCION) VALUES ('$nombrepu', '$tipopu', '$descripcion')";
     $resultado = mysqli_query($conn, $query);
     if(!$resultado){
-        die("Query failed");
-    }
-    header('Location: ../contacto.php');
+        echo '<script>
+        alert("Error al guardar informacion");
+        window.history.go(-1);
+        </script>' ;
+    }else{
+        echo '<script>
+        alert("Informacion gurdada correctamente");
+        window.history.go(-1);
+        </script>' ; 
+    } 
 }

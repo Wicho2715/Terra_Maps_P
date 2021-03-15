@@ -17,13 +17,13 @@
 				<div class="row">
                     <div class="col-md-6">
                         <label for="nombre">Nombre del cliente:</label>
-                        <input name="nombre" type="text" class="form-control" placeholder=""  required>
+                        <input name="nombre" type="text" class="form-control" placeholder="Nombre completo "  required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="cargo">Cargo:</label>
-                        <input type="text" name="cargo"  class="form-control" placeholder=""  required>
+                        <input type="text" name="cargo"  class="form-control" placeholder="Cargo que desempeña"  required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
@@ -31,13 +31,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="dependencia">Dependencia:</label>
-                        <input type="text" name="dependencia"  class="form-control" placeholder=""  required>
+                        <input type="text" name="dependencia"  class="form-control" placeholder="Dependencia a la que pertenece"  required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="email">Email:</label>
-                        <input type="email" name="email"  class="form-control" placeholder="" required>
+                        <input type="email" name="email"  class="form-control" placeholder="Correo electronico" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
@@ -45,13 +45,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="movil">Telefono:</label>
-                        <input type="text" name="movil"  class="form-control" placeholder="" required>
+                        <input type="text" name="movil"  class="form-control" placeholder="Telefono movil" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="estado">Estado del Cliente:</label>
-                        <input type="text" name="estado"  class="form-control" placeholder="" required>
+                        <input type="text" name="estado"  class="form-control" placeholder="Estado parcial" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>

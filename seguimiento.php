@@ -1,17 +1,10 @@
-<?php include("db/conexion.php"); ?>
 <?php require_once "views/parte_superior.php"?>
+<?php include("db/conexion.php");
+
+$query=mysqli_query($conn,"SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM contacto");
+?>
 	
 <div class="container">
-
-				<?php if (isset($_SESSION['message'])) { ?>
-					<div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-						<?= $_SESSION['message']?>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				<?php session_unset(); } ?>
-
         <div class="card">
             <div class="card-header bg-info">
                 <h3 class="text-white">Seguimientos</h3>
@@ -33,17 +26,27 @@
                     </div>
                     <div class="col-md-6">
                         <label for="estadoc">Estado de la Cita:</label>
-                        <input type="text" name="estadoc"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="estadoc"  class="form-control" placeholder="Estado en el que se encuentra la cita" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="idcontacto">ID del Contacto:</label>
-                        <input type="text" name="idcontacto"  class="form-control" placeholder="" value="" required>
-                        <div class="valid-feedback">¡OK valido!</div>
-                        <div class="invalid-feedback">Completar el campo.</div>
+                        <label for="idcontacto">Nombre del Contacto:</label>
+                        <select class="form-control" name="idcontacto" required > 
+                            <option value="">Nombre del Contacto</option>
+                        <?php
+                            $v = mysqli_query($conn,"SELECT * FROM contacto"); 
+                            while($contacto = mysqli_fetch_row($v))
+                            {
+                        ?>
+                            <option value="<?php echo $contacto[0] ?>"> <?php echo $contacto[1]?> </option>
+                        <?php
+                            }
+                    
+                        ?>
+                        </select>
                     </div>
                 </div>
 				</form>	
