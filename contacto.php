@@ -7,7 +7,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
 ?>	
 <div class="container">
         <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h3 class="text-white">Contactos</h3>
             </div>
             <div class="card-body">
@@ -166,7 +166,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
         </div>
         <br>
         <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                  <h3 class="text-white">Publicidad</h3>
             </div>
             <div class="card-body">

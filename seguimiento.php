@@ -6,7 +6,7 @@ $query=mysqli_query($conn,"SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM contacto");
 	
 <div class="container">
         <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h3 class="text-white">Seguimientos</h3>
             </div>
             <div class="card-body">
@@ -55,7 +55,7 @@ $query=mysqli_query($conn,"SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM contacto");
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="table-responsive">
+                            <div class="table-responsive" >
                                 <table id="tablaSeguimiento" class="table table-striped table-bordered table-condensed" 
                                 style="width: 100%">
                                     <thead>

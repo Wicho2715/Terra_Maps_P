@@ -34,7 +34,7 @@ if (isset($_POST['modificarpu'])) {
 <?php require_once "views/parte_superior.php"?>
 
 <div class="container">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h3 class="text-white">Modificar Publicidad</h3>
             </div>
     <div class="card card-body">

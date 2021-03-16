@@ -3,7 +3,7 @@
 	
 <div class="container">
         <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h3 class="text-white">Clientes/Prospectos</h3>
             </div>
             <div class="card-body">
@@ -64,8 +64,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="table-responsive">
-                                <table id="tablaClientes" class="table table-striped table-bordered table-condensed" 
-                                style="width: 100%">
+                                <table class="table table-striped table-bordered table-condensed" id="tablaClientes" width="100%" cellspacing="0">
+                                <!--class="table table-striped table-bordered table-condensed" style="width: 100%"-->
                                     <thead>
                                         <tr>
                                             <th>ID</th>
