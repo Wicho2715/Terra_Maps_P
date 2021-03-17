@@ -1,5 +1,5 @@
 <?php require_once "views/parte_superior.php"?>
-
+<?php include("db/conexion.php");?>
 <!--Inicio-->
 
 <div class = "container">
@@ -178,14 +178,28 @@
                                 <table class="table table-bordered" id="tablaReportes" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>ID Cliente</th>
                                             <th>Cliente</th>
+											<th>ID Proyecto</th>
                                             <th>Proyecto</th>
-                                            <th>Tipo</th>
-                                            <th>Reportes</th>
+                                            <th>Estado del Proyecto</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+									$query = "SELECT T1.ID_CLIENTE, T2.NOMBRE, T1.ID_PROYECTO, T1.NOMBRE_PROYECTO, T1.ESTADO_PROYECTO FROM proyecto_inicial T1
+									INNER JOIN clientes T2 ON T1.ID_CLIENTE = T2.ID_CLIENTE";
+									$result_consulta = mysqli_query($conn, $query);    
 
+									while($row = mysqli_fetch_assoc($result_consulta)) { ?>
+									<tr>
+										<td><?php echo $row['ID_CLIENTE']; ?></td>
+										<td><?php echo $row['NOMBRE']; ?></td>
+										<td><?php echo $row['ID_PROYECTO']; ?></td>
+										<td><?php echo $row['NOMBRE_PROYECTO']; ?></td>
+										<td><?php echo $row['ESTADO_PROYECTO']; ?></td>
+									</tr>
+									<?php } ?>
                                     </tbody>
                                 </table>
                             </div>
