@@ -106,7 +106,7 @@ if($usuario == null || $usuario= ''){
                         <a class="collapse-item" href="proyectoinicial.php">Proyecto Inicial</a>
                         <a class="collapse-item" href="antecedentes.php">Antecedentes</a>
                         <a class="collapse-item" href="financiamiento.php">Financiamiento</a>
-                        <a class="collapse-item" href="utilities-other.html">Reportes</a>
+                        <a class="collapse-item" href="editarficha.php">Editor de registros</a>
                     </div>
                 </div>
             </li>
