@@ -33,7 +33,7 @@ $(document).ready(function() {
             },
             {
                 extend: 'print',
-                text: 'hola',
+                text: '<i class="fa fa-print"></i>',
                 titleAttr: 'Imprimir',
                 className: 'btn btn-info'
             },
