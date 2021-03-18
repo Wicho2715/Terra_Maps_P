@@ -59,3 +59,10 @@
 <!--Fin-->
 
 <?php require_once "views/parte_inferior.php"?>
+
+
+
+
+
+
+

@@ -80,7 +80,7 @@
                                     </thead>
                                     <tbody>
 									<?php
-$query = "SELECT * FR									OM clientes";
+                                    $query = "SELECT * FROM clientes";
 									$result_clientes = mysqli_query($conn, $query);    
 
 									while($row = mysqli_fetch_assoc($result_clientes)) { ?>

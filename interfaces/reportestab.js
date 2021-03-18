@@ -15,22 +15,6 @@ $(document).ready(function() {
                 "sPrevious": "Anterior"
             },
             "sProcessing": "Procesando...",
-        },
-        //para usar los botones   
-        responsive: "true",
-        dom: 'Bfrtilp',
-        buttons: [{
-                extend: 'pdfHtml5',
-                text: '<i class="fas fa-file-pdf"></i> ',
-                titleAttr: 'Exportar a PDF',
-                className: 'btn btn-danger'
-            },
-            {
-                extend: 'print',
-                text: '<i class="fa fa-print"></i>',
-                titleAttr: 'Imprimir',
-                className: 'btn btn-info'
-            },
-        ]
+        }
     });
 });

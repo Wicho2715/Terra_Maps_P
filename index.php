@@ -130,10 +130,11 @@
 																		    } echo 'Clientes y prospectos del mes de '.$mes; ?></h6>
 
                                 </div>
+                                
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-																			<canvas id="myChart" width="10" height="5"></canvas>
+										<canvas id="myChart" width="10" height="5"></canvas>
 
 
                                     </div>
