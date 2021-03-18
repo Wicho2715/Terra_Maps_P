@@ -101,26 +101,41 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
+                                    <h6 class="m-0 font-weight-bold text-primary">
+																			<?php $mes= date("F");
+																		    if($mes=="January"){
+																		      $mes='Enero';
+																		    }elseif ($mes=="Frebruary") {
+																		      $mes='Febrero';
+																		    }elseif ($mes=="March") {
+																		      $mes='Marzo';
+																		    }elseif ($mes=="April") {
+																		      $mes='Abril';
+																		    }elseif ($mes=="May") {
+																		      $mes='Mayo';
+																		    }elseif ($mes="June") {
+																		      $mes='Junio';
+																		    }elseif ($mes="July") {
+																		      $mes='Julio';
+																		    }elseif ($mes="August") {
+																		      $mes='Agosto';
+																		    }elseif ($mes="Septiember") {
+																		      $mes='Septiembre';
+																		    }elseif ($mes="October") {
+																		      $mes='Octubre';
+																		    }elseif ($mes="November") {
+																		      $mes='Noviembre';
+																		    }elseif ($mes="December") {
+																		      $mes='Diciembre';
+																		    } echo 'Clientes y prospectos del mes de '.$mes; ?></h6>
+
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
+																			<canvas id="myChart" width="10" height="5"></canvas>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +204,7 @@
                                     <?php
 									$query = "SELECT T1.ID_CLIENTE, T2.NOMBRE, T1.ID_PROYECTO, T1.NOMBRE_PROYECTO, T1.ESTADO_PROYECTO FROM proyecto_inicial T1
 									INNER JOIN clientes T2 ON T1.ID_CLIENTE = T2.ID_CLIENTE";
-									$result_consulta = mysqli_query($conn, $query);    
+									$result_consulta = mysqli_query($conn, $query);
 
 									while($row = mysqli_fetch_assoc($result_consulta)) { ?>
 									<tr>
@@ -210,3 +225,41 @@
 <!--Fin-->
 
 <?php require_once "views/parte_inferior.php"?>
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+				labels: ['Clientes', 'Prospectos'],
+				datasets: [{
+						data: [12, 19],
+						backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+								'rgba(54, 162, 235, 0.2)',
+								'rgba(255, 206, 86, 0.2)',
+								'rgba(75, 192, 192, 0.2)',
+								'rgba(153, 102, 255, 0.2)',
+								'rgba(255, 159, 64, 0.2)'
+						],
+						borderColor: [
+								'rgba(255, 99, 132, 1)',
+								'rgba(54, 162, 235, 1)',
+								'rgba(255, 206, 86, 1)',
+								'rgba(75, 192, 192, 1)',
+								'rgba(153, 102, 255, 1)',
+								'rgba(255, 159, 64, 1)'
+						],
+						borderWidth: 1
+				}]
+		}/*,
+		options: {
+				scales: {
+						yAxes: [{
+								ticks: {
+										beginAtZero: true
+								}
+						}]
+				}
+		}*/
+});
+</script>

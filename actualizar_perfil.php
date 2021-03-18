@@ -1,5 +1,6 @@
 <?php
 require 'db/conexion.php';
+session_start();
 $nombre= $_POST['nombre'];
 $apellido= $_POST['apellido'];
 $usuario= $_POST['usuario'];
@@ -20,6 +21,7 @@ $usuariog= $_SESSION['usuario'];
 $consulta= "SELECT * FROM login WHERE USUARIO= '$usuario'";
 $resultado= mysqli_query($conn, $consulta);
 $filas=mysqli_num_rows($resultado);
+
 if ($usuariog != $usuario) {
   if($filas > 0){?>
         <script type="text/javascript">
