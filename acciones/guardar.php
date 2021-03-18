@@ -1,8 +1,8 @@
 <?php
 include("../db/conexion.php");
-session_start();
+
 if(isset($_POST['guardar'])){
-    $nombre = $_POST['nombres'];
+    $nombre = $_POST['nombre'];
     $cargo = $_POST['cargo'];
     $dependencia = $_POST['dependencia'];
     $email = $_POST['email'];
@@ -11,10 +11,14 @@ if(isset($_POST['guardar'])){
     
     $query = "INSERT INTO clientes(NOMBRE, CARGO, DEPENDENCIA, EMAIL, MOVIL, ESTADO) VALUES ('$nombre', '$cargo', '$dependencia', '$email', '$movil', '$estado')";
     $resultado = mysqli_query($conn, $query);
-    if(!$resultado){
-        die("Query failed");
-    }
-    $_SESSION['message'] = 'Datos guardados correctamente';
-    $_SESSION['message_type'] = 'success';
-    header('Location: ../clientes.php');
+    echo '<script>
+        alert("Error al guardar informacion");
+        window.history.go(-1);
+        </script>' ;
+    }else{
+        echo '<script>
+        alert("Informacion gurdada correctamente");
+        window.history.go(-1);
+        </script>' ; 
+    } 
 }

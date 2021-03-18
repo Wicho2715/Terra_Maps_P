@@ -1,51 +1,55 @@
 .abs-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: lightblue;
-  
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: lightblue;
 }
 
-.container #header{
-  font-size: 1.3rem;
-  text-align: center;
-  background: #4364F7;
-  color: #fff;  
+.container #header {
+    font-size: 1.3rem;
+    text-align: center;
+    background: #4364F7;
+    color: #fff;
 }
 
-.container .titulo{
-font-size: 1.5rem;
-color: lightslategrey;
-
+.container .titulo {
+    font-size: 1.5rem;
+    color: lightslategrey;
 }
-
 
 .form {
     width: 450px;
-  
 }
 
 #mycontainer {
-  max-height: 100% !important;
+    max-height: 100% !important;
 }
 
-.abs-center .form-row #estado{
-  width: 50px;
+.abs-center .form-row #estado {
+    width: 50px;
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ecf2a15225bfdaa15bb8de56da94c2f035ffca84
 /*
 .container .btn-primary{
   background: #0052D4;  
   /* fallback for old browsers */
- /* background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+
+
+/* background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
     /* Chrome 10-25, Safari 5.1-6 */
-  /*background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
+
+
+/*background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /*width: 100px;
+
+
+/*width: 100px;
   height: 40px;
   border:none;
   color:#fff; 
@@ -54,15 +58,23 @@ color: lightslategrey;
   
 }
 */
+
+
 /*
 button{
     background: #0052D4;  
     /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+
+
+/*background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
       /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
+
+
+/*background: linear-gradient(to right, #6FB1FC, #4364F7, #276ee0f1); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   /* display: block;
+
+
+/* display: block;
     width: 100px;
     height: 40px;
     border:none;
@@ -73,7 +85,3 @@ button{
     
 }
 /*
-
-
-
-

@@ -1,8 +1,8 @@
-*{
-	box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
-form{
+form {
     background: #fff;
     width: 30%;
     padding: 10px 0;
@@ -10,7 +10,7 @@ form{
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
 }
 
-.form{
+.form {
     width: 70%;
     margin: auto;
 }

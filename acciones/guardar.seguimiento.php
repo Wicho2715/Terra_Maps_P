@@ -1,6 +1,6 @@
 <?php
 include("../db/conexion.php");
-session_start();
+
 if(isset($_POST['guardarse'])){
     $fechac = $_POST['fechac'];
     $estadoc = $_POST['estadoc'];
@@ -10,9 +10,14 @@ if(isset($_POST['guardarse'])){
     $query = "INSERT INTO seguimiento(FECHA, ESTADO_CITA, ID_CONTACTO) VALUES ('$fechac', '$estadoc', '$idcontacto')";
     $resultado = mysqli_query($conn, $query);
     if(!$resultado){
-        die("Query failed");
-    }
-    $_SESSION['message'] = 'Datos guardados correctamente';
-    $_SESSION['message_type'] = 'success';
-    header('Location: ../seguimiento.php');
+        echo '<script>
+            alert("Error al guardar informacion");
+            window.history.go(-1);
+            </script>' ;
+    }else{
+        echo '<script>
+        alert("Informacion gurdada correctamente");
+        window.history.go(-1);
+        </script>' ; 
+     } 
 }

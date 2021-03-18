@@ -2,19 +2,9 @@
 <?php require_once "views/parte_superior.php"?>
 	
 <div class="container">
-
-				<?php if (isset($_SESSION['message'])) { ?>
-					<div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-						<?= $_SESSION['message']?>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				<?php session_unset(); } ?>
-
         <div class="card">
-            <div class="card-header bg-info">
-                <h3 class="text-white">Clientes y/o Prospectos</h3>
+            <div class="card-header bg-primary">
+                <h3 class="text-white">Clientes/Prospectos</h3>
             </div>
             <div class="card-body">
 				<form action="acciones/guardar.php" method="POST" class="needs-validation" novalidate>
@@ -26,14 +16,14 @@
 				<br>
 				<div class="row">
                     <div class="col-md-6">
-                        <label for="nombres">Nombres:</label>
-                        <input type="text" name="nombres"  class="form-control" placeholder="" value="" required>
+                        <label for="nombre">Nombre del cliente:</label>
+                        <input name="nombre" type="text" class="form-control" placeholder="Nombre completo "  required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="cargo">Cargo:</label>
-                        <input type="text" name="cargo"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="cargo"  class="form-control" placeholder="Cargo que desempeña"  required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
@@ -41,66 +31,66 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="dependencia">Dependencia:</label>
-                        <input type="text" name="dependencia"  class="form-control" placeholder="" value="" required>
+                        <input type="text" name="dependencia"  class="form-control" placeholder="Dependencia a la que pertenece"  required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="email">Email:</label>
-                        <input type="email" name="email"  class="form-control" placeholder="" value="" required>
+                        <input type="email" name="email"  class="form-control" placeholder="Correo electronico" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="movil">Teléfono:</label>
-                        <input type="text" name="movil"  class="form-control" placeholder="" value="" required>
+                        <label for="movil">Telefono:</label>
+                        <input type="text" name="movil"  class="form-control" placeholder="Telefono movil" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                     <div class="col-md-6">
-                        <label for="estado">Estado:</label>
-                        <input type="text" name="estado"  class="form-control" placeholder="" value="" required>
+                        <label for="estado">Estado del Cliente:</label>
+                        <input type="text" name="estado"  class="form-control" placeholder="Estado parcial" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
+                
 				</form>	
-
             </div>
             <div class="card-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="table-responsive">
-                                <table id="tablaClientes" class="table table-striped table-bordered table-condensed" 
-                                style="width: 100%">
+                                <table class="table table-striped table-bordered table-condensed" id="tablaClientes" width="100%" cellspacing="0">
+                                <!--class="table table-striped table-bordered table-condensed" style="width: 100%"-->
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nombre</th>
+                                            <th>Nombre del cliente</th>
                                             <th>Cargo</th>
                                             <th>Dependencia</th>
                                             <th>Email</th>
-                                            <th>Telefono</th>
+                                            <th>Movil</th>
                                             <th>Estado</th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 									<?php
-									$query = "SELECT * FROM clientes";
-									$result_cliente = mysqli_query($conn, $query);    
+$query = "SELECT * FR									OM clientes";
+									$result_clientes = mysqli_query($conn, $query);    
 
-									while($row = mysqli_fetch_assoc($result_cliente)) { ?>
+									while($row = mysqli_fetch_assoc($result_clientes)) { ?>
 									<tr>
 										<td><?php echo $row['ID_CLIENTE']; ?></td>
 										<td><?php echo $row['NOMBRE']; ?></td>
 										<td><?php echo $row['CARGO']; ?></td>
 										<td><?php echo $row['DEPENDENCIA']; ?></td>
 										<td><?php echo $row['EMAIL']; ?></td>
-										<td><?php echo $row['MOVIL']; ?></td>
+                                        <td><?php echo $row['MOVIL']; ?></td>
 										<td><?php echo $row['ESTADO']; ?></td>
 										<td>
 										<a href="editar.php?ID_CLIENTE=<?php echo $row['ID_CLIENTE']?>" class="btn btn-primary">
@@ -110,7 +100,6 @@
 										<i class="far fa-trash-alt"></i>
 										</a>
 										</td>
-										
 									</tr>
 									<?php } ?>
                                     </tbody>

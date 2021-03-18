@@ -35,8 +35,6 @@ if (isset($_POST['modificar'])) {
 
   $query = "UPDATE clientes set NOMBRE = '$nombre', CARGO = '$cargo', DEPENDENCIA = '$dependencia', EMAIL = '$email', MOVIL = '$movil', ESTADO = '$estado' WHERE ID_CLIENTE = $id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Informacion Actualizada Correctamente';
-  $_SESSION['message_type'] = 'primary';
   header('Location: clientes.php');
 }
 ?>
@@ -44,7 +42,7 @@ if (isset($_POST['modificar'])) {
 <?php require_once "views/parte_superior.php"?>
 
 <div class="container">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h3 class="text-white">Modificar Clientes y/o Prospectos</h3>
             </div>
     <div class="card card-body">

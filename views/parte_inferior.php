@@ -49,6 +49,8 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="interfaces/reportestab.js"></script>
     <script src="interfaces/clientes.js"></script>
     <script src="interfaces/contacto.js"></script>
     <script src="interfaces/publicidad.js"></script>
@@ -61,6 +63,11 @@
     <script src="interfaces/codigo.js"></script>
     <script type="text/javascript" src="vendor/datatables/datatables.min.js"></script>
     
+    <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
 </body>
 
 </html>

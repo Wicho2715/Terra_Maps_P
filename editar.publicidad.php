@@ -27,8 +27,6 @@ if (isset($_POST['modificarpu'])) {
 
   $query = "UPDATE publicidad set NOMBRE_PU = '$nombrepu', TIPO = '$tipopu', DESCRIPCION = '$descripcion' WHERE ID_PUBLICIDAD = $id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Informacion Actualizada Correctamente';
-  $_SESSION['message_type'] = 'primary';
   header('Location: contacto.php');
 }
 ?>
@@ -36,7 +34,7 @@ if (isset($_POST['modificarpu'])) {
 <?php require_once "views/parte_superior.php"?>
 
 <div class="container">
-            <div class="card-header bg-info">
+            <div class="card-header bg-primary">
                 <h3 class="text-white">Modificar Publicidad</h3>
             </div>
     <div class="card card-body">

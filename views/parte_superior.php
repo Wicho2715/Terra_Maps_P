@@ -34,8 +34,8 @@ if($usuario == null || $usuario= ''){
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <link href="css/estilos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/tabla.css">
+    
+    <link rel="stylesheet" href="css/estilota.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 
@@ -52,7 +52,8 @@ if($usuario == null || $usuario= ''){
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <!-- <i class="fas fa-laugh-wink"></i>-->
+                    
                 </div>
                 <div class="sidebar-brand-text mx-3">Administrador </div>
             </a>
@@ -72,14 +73,15 @@ if($usuario == null || $usuario= ''){
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Interfaces
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                     <!-- <i class="fas fa-fw fa-cog"></i>-->
+                     <i class="fas fa-user-plus"></i>
                     <span>Captac&oacute;n de Clientes</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -96,7 +98,10 @@ if($usuario == null || $usuario= ''){
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <!-- <i class="fas fa-fw fa-wrench"></i>-->
+                    <i class="fas fa-file-alt"></i>
+
+                    
                     <span>Ficha de avance</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
@@ -253,9 +258,9 @@ if($usuario == null || $usuario= ''){
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                   <?php
-                                    $nombre= $_SESSION['nombre'];
+                                    $nombrec= $_SESSION['nombre'];
                                     $apellido= $_SESSION['apellido'];
-                                    echo "$nombre ";
+                                    echo "$nombrec ";
                                   ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
