@@ -57,16 +57,16 @@ if (isset($_POST['modificar'])) {
 <!-- INICIO FORMULARIO HTML -->
 
 <div class="container">
-<header id="header"> Etapa 1 Proyecto Inicial</header>
+<header id="header"> Modificar informacion Proyecto Inicial</header>
     <div clas="abs-center">
     
-<form action="acciones/guardarproyectoinicial.php" method="POST" class="needs-validation" novalidate >
+<form action="editar.php?ID_PROYECTO=<?php echo $_GET['ID_PROYECTO']; ?>" method="POST" class="needs-validation" novalidate >
     <div class="form-row mt-5">
     <div class="titulo"> --  Informaci&oacute;n General  --</div>
     <br>
         <div class="col-md-12 mb-12">
             <label for="validarNombrepro">Nombre del proyecto:<span class="red">*</span></label>
-            <input type="text" class="form-control"  name="nomproyec" required>
+            <input type="text" class="form-control"  name="nomproyec" required value="<?php echo $nomproyec;?>">
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -75,7 +75,7 @@ if (isset($_POST['modificar'])) {
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="valiobpro">Objetivo:<span class="red">*</span></label>
-            <textarea class="form-control"  name="objetpro" rows="2" min="25" required></textarea>
+            <textarea class="form-control"  name="objetpro" rows="2" min="25" required value="<?php echo $objetpro; ?>"></textarea>
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -84,28 +84,14 @@ if (isset($_POST['modificar'])) {
     <div class="row">
         <div class="col-md-12 mb-12">
         <label for="valiobpro">Nombre del cliente:<span class="red">*</span></label>
-        <br>
-        <select class="form-control" name="cliente" id="" required > 
-            <option value="">Cliente</option>
-        <?php
-            $v = mysqli_query($conn,"SELECT * FROM clientes"); 
-            while($clientes = mysqli_fetch_row($v))
-            {
-        ?>
-            <option value="<?php echo $clientes[0] ?>"> <?php echo $clientes[1]?> </option>
-        <?php
-            }
-    
-        ?>
-
-        </select>
+        <input type="text" name="puesto"  class="form-control" placeholder="" value="" required value="<?php echo $cliente; ?>">
         </div>
     </div>
     
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="puesto">Puesto que desempe&ntilde;a</label>
-            <input type="text" name="puesto"  class="form-control" placeholder="" value="" required>
+            <input type="text" name="puesto"  class="form-control" placeholder="" value="" required value="<?php echo $puesto; ?>">
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -114,7 +100,7 @@ if (isset($_POST['modificar'])) {
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="telefono">Telefono:</label>
-            <input type="number" name="telefono"  class="form-control" placeholder="" value="" required>
+            <input type="number" name="telefono"  class="form-control" placeholder="" value="" required value="<?php echo $telefono; ?>">
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -123,7 +109,7 @@ if (isset($_POST['modificar'])) {
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="mkt">Cuenta con una estrategia de MKT</label>
-            <input type="text" name="planmkt"  class="form-control" placeholder="" value="" required>
+            <input type="text" name="planmkt"  class="form-control" placeholder="" value="" required value="<?php echo $planmkt; ?>">
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -132,7 +118,7 @@ if (isset($_POST['modificar'])) {
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="estrategico">Cuenta con un plan estrategico</label>
-            <input type="text" name="plane"  class="form-control" placeholder="" value="" required>
+            <input type="text" name="plane"  class="form-control" placeholder="" value="" required value="<?php echo $plane; ?>">
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
@@ -141,7 +127,7 @@ if (isset($_POST['modificar'])) {
     <div class="row">
         <div class="col-md-12 mb-12">
             <label for="estrategico">Describir el recurso humano con el que cuenta actualemnte</label>
-            <input type="text" name="recursoh"  class="form-control" placeholder="" value="" required>
+            <input type="text" name="recursoh"  class="form-control" placeholder="" value="" required value="<?php echo $recursoh; ?>">
             <div class="valid-feedback">¡OK valido!</div>
             <div class="invalid-feedback">Completar el campo.</div>
         </div>
