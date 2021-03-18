@@ -42,6 +42,18 @@
 										</a>
 										
 									</td>
+                                    <td>
+										<a href="editarproyecto.php?ID_PROYECTO=<?php echo $row['ID_PROYECTO']?>" class="btn btn-primary">
+										<i class="fas fa-marker"></i>
+										</a>
+										
+									</td>
+                                    <td>
+										<a href="editarproyecto.php?ID_PROYECTO=<?php echo $row['ID_PROYECTO']?>" class="btn btn-primary">
+										<i class="fas fa-marker"></i>
+										</a>
+										
+									</td>
                                     
 
 									</tr>
