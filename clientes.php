@@ -1,6 +1,6 @@
 <?php include("db/conexion.php"); ?>
 <?php require_once "views/parte_superior.php"?>
-	
+
 <div class="container">
         <div class="card">
             <div class="card-header bg-primary">
@@ -51,13 +51,17 @@
                     </div>
                     <div class="col-md-6">
                         <label for="estado">Estado del Cliente:</label>
-                        <input type="text" name="estado"  class="form-control" placeholder="Estado parcial" required>
+												<select class="form-control" name="estado" id="" required >
+                            <option value="">Estado del cliente</option>
+                        		<option value="Cliente">Cliente</option>
+														<option value="Prospecto">Prospecto</option>
+                        </select>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
                 </div>
-                
-				</form>	
+
+				</form>
             </div>
             <div class="card-footer">
                 <div class="container">
@@ -82,7 +86,7 @@
                                     <tbody>
 									<?php
                                     $query = "SELECT * FROM clientes";
-									$result_clientes = mysqli_query($conn, $query);    
+									$result_clientes = mysqli_query($conn, $query);
 
 									while($row = mysqli_fetch_assoc($result_clientes)) { ?>
 									<tr>
@@ -112,7 +116,6 @@
                 </div>
             </div>
         </div>
-    </div>	
+    </div>
 
 <?php require_once "views/parte_inferior.php"?>
-
