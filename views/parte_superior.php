@@ -82,7 +82,7 @@ if($usuario == null || $usuario= ''){
                     aria-expanded="true" aria-controls="collapseTwo">
                      <!-- <i class="fas fa-fw fa-cog"></i>-->
                      <i class="fas fa-user-plus"></i>
-                    <span>Captac&oacute;n de Clientes</span>
+                    <span>Captaci&oacute;n de Clientes</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -111,7 +111,9 @@ if($usuario == null || $usuario= ''){
                         <a class="collapse-item" href="proyectoinicial.php">Proyecto Inicial</a>
                         <a class="collapse-item" href="antecedentes.php">Antecedentes</a>
                         <a class="collapse-item" href="financiamiento.php">Financiamiento</a>
-                        <a class="collapse-item" href="editarficha.php">Editor de registros</a>
+                        <a class="collapse-item" href="editarproyectoinicial.php">Modificar P-I</a>
+                        <a class="collapse-item" href="registroante.php">Modificar Antecedentes</a>
+                        <a class="collapse-item" href="Registrofina.php">Modificar Financiamiento</a>
                     </div>
                 </div>
             </li>
