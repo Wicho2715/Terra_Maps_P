@@ -13,6 +13,7 @@
                 <div class="card-header bg-primary">
                 <h3 class="text-white">Informaci&oacute;n Financiamiento</h3>
             </div>
+            <br>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="table-responsive">
