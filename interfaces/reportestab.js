@@ -20,16 +20,36 @@ $(document).ready(function() {
         responsive: "true",
         dom: 'Bfrtilp',
         buttons: [{
+                extend: 'excelHtml5',
+                text: '<i class="fas fa-file-excel"></i> ',
+                titleAttr: 'Exportar a Excel',
+                className: 'btn btn-success'
+            },
+            {
                 extend: 'pdfHtml5',
                 text: '<i class="fas fa-file-pdf"></i> ',
                 titleAttr: 'Exportar a PDF',
-                className: 'btn btn-danger'
+                className: 'btn btn-danger',
+                customize: function(doc) {
+                    doc.styles.title = {
+                        color: 'red',
+                        fontSize: '40',
+                        background: 'blue',
+                        alignment: 'center'
+                    }
+                    doc.styles.tableHeader = {
+                        color: 'blue',
+                        background: 'withe',
+                        alignment: 'center'
+                    }
+
+                }
             },
             {
                 extend: 'print',
-                text: '<i class="fa fa-print"></i>',
+                text: '<i class="fa fa-print"></i> ',
                 titleAttr: 'Imprimir',
-                className: 'btn btn-info'
+                className: 'btn btn-primary'
             },
         ]
     });

@@ -1,3 +1,4 @@
+
 <?php
 include("../db/conexion.php");
 
@@ -11,7 +12,8 @@ if(isset($_POST['guardar'])){
     
     $query = "INSERT INTO clientes(NOMBRE, CARGO, DEPENDENCIA, EMAIL, MOVIL, ESTADO) VALUES ('$nombre', '$cargo', '$dependencia', '$email', '$movil', '$estado')";
     $resultado = mysqli_query($conn, $query);
-    echo '<script>
+    if(!$resultado){
+        echo '<script>
         alert("Error al guardar informacion");
         window.history.go(-1);
         </script>' ;

@@ -130,10 +130,11 @@
 																		    } echo 'Clientes y prospectos del mes de '.$mes; ?></h6>
 
                                 </div>
+                                
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-																			<canvas id="myChart" width="10" height="5"></canvas>
+										<canvas id="myChart" width="10" height="5"></canvas>
 
 
                                     </div>
@@ -190,7 +191,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="tablaReportes" width="100%" cellspacing="0">
+                                <table class="table table-striped table-bordered table-condensed" id="tablaReportes" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>ID Cliente</th>
@@ -198,12 +199,16 @@
 											<th>ID Proyecto</th>
                                             <th>Proyecto</th>
                                             <th>Estado del Proyecto</th>
+                                            <th>Estado del Antecedentes</th>
+                                            <th>Estado del Financiamiento</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-									$query = "SELECT T1.ID_CLIENTE, T2.NOMBRE, T1.ID_PROYECTO, T1.NOMBRE_PROYECTO, T1.ESTADO_PROYECTO FROM proyecto_inicial T1
-									INNER JOIN clientes T2 ON T1.ID_CLIENTE = T2.ID_CLIENTE";
+									$query = "SELECT T1.ID_CLIENTE, T2.NOMBRE, T1.ID_PROYECTO, T1.NOMBRE_PROYECTO, T1.ESTADO_PROYECTO, T3.ESTADO_ANTECEDENTES, T4.ESTADO_FINANCIAMIENTO FROM proyecto_inicial T1
+									INNER JOIN clientes T2 ON T1.ID_CLIENTE = T2.ID_CLIENTE
+                                    INNER JOIN antecedentes T3 ON T1.ID_PROYECTO = T3.ID_PROYECTO
+                                    INNER JOIN financiamiento T4 ON T1.ID_PROYECTO = T4.ID_PROYECTO";
 									$result_consulta = mysqli_query($conn, $query);
 
 									while($row = mysqli_fetch_assoc($result_consulta)) { ?>
@@ -213,6 +218,8 @@
 										<td><?php echo $row['ID_PROYECTO']; ?></td>
 										<td><?php echo $row['NOMBRE_PROYECTO']; ?></td>
 										<td><?php echo $row['ESTADO_PROYECTO']; ?></td>
+                                        <td><?php echo $row['ESTADO_ANTECEDENTES']; ?></td>
+                                        <td><?php echo $row['ESTADO_FINANCIAMIENTO']; ?></td>
 									</tr>
 									<?php } ?>
                                     </tbody>

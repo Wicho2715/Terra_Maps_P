@@ -21,7 +21,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
 				<div class="row">
                     <div class="col-md-6">
                         <label for="tipocontacto">Tipo de contacto:</label>
-                        <input type="text" name="tipocontacto"  class="form-control" placeholder="Medio de contacto" value="" required>
+                        <input type="text" name="tipocontacto"  class="form-control" placeholder="Medio de contacto email o movil" value="" required>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
