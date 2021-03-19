@@ -38,8 +38,8 @@ $(document).ready(function() {
                         alignment: 'center'
                     }
                     doc.styles.tableHeader = {
-                        color: 'red',
-                        background: 'blue',
+                        color: 'blue',
+                        background: 'withe',
                         alignment: 'center'
                     }
 

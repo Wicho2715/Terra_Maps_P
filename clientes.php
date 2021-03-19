@@ -75,6 +75,7 @@
                                             <th>Email</th>
                                             <th>Movil</th>
                                             <th>Estado</th>
+                                            <th>Fecha de registro</th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
@@ -92,6 +93,7 @@
 										<td><?php echo $row['EMAIL']; ?></td>
                                         <td><?php echo $row['MOVIL']; ?></td>
 										<td><?php echo $row['ESTADO']; ?></td>
+                                        <td><?php echo $row['FECHA']; ?></td>
 										<td>
 										<a href="editar.php?ID_CLIENTE=<?php echo $row['ID_CLIENTE']?>" class="btn btn-primary">
 										<i class="fas fa-marker"></i>
