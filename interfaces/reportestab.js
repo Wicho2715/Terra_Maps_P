@@ -29,7 +29,21 @@ $(document).ready(function() {
                 extend: 'pdfHtml5',
                 text: '<i class="fas fa-file-pdf"></i> ',
                 titleAttr: 'Exportar a PDF',
-                className: 'btn btn-danger'
+                className: 'btn btn-danger',
+                customize: function(doc) {
+                    doc.styles.title = {
+                        color: 'red',
+                        fontSize: '40',
+                        background: 'blue',
+                        alignment: 'center'
+                    }
+                    doc.styles.tableHeader = {
+                        color: 'red',
+                        background: 'blue',
+                        alignment: 'center'
+                    }
+
+                }
             },
             {
                 extend: 'print',
