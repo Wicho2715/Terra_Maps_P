@@ -32,14 +32,21 @@ $(document).ready(function() {
                 className: 'btn btn-danger',
                 customize: function(doc) {
                     doc.styles.title = {
-                        color: 'red',
+                        color: 'black',
                         fontSize: '40',
-                        background: 'blue',
                         alignment: 'center'
                     }
                     doc.styles.tableHeader = {
-                        color: 'blue',
-                        background: 'withe',
+                        color: 'red',
+                        alignment: 'center'
+                    }
+                    doc.styles.tableBodyEven = {
+                        alignment: 'center'
+                    }
+                    doc.styles.tableBodyOdd = {
+                        alignment: 'center'
+                    }
+                    doc.styles.tableFooter = {
                         alignment: 'center'
                     }
 
