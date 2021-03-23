@@ -179,6 +179,10 @@
                         <label>
                             <input type="radio" name="rpropios" value="Beneficios propios"> Beneficios guardados
                         </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="rpropios" value="Ninguno"> Ninguno
+                        </label>
                     </fieldset>
         
     </div>
@@ -197,6 +201,10 @@
                         <br>
                         <label>
                             <input type="radio" name="rejenos" value="Bonos"> Bonos
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="rejenos" value="Ninguno"> Ninguno
                         </label>
                     </fieldset>
         </div>
