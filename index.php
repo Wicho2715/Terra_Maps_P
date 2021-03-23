@@ -16,11 +16,11 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                TOTAL DE CLIENTES</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        <i class="fas fa-user-check fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -34,45 +34,19 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                TOTAL DE PROSPECTOS</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+
+                                            <i class="fas fa-user-clock fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -81,11 +55,29 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                TOTAL DE PROYECTOS</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-paste fa-2x text-gray-300"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                TOTAL DE USUARIOS</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user-friends fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -130,7 +122,7 @@
 																		    } echo 'Clientes y prospectos del mes de '.$mes; ?></h6>
 
                                 </div>
-                                
+
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
@@ -232,6 +224,14 @@
 <!--Fin-->
 
 <?php require_once "views/parte_inferior.php"?>
+<?php
+$fecha= date("Y-m");
+$query= mysqli_query($conn, "SELECT ESTADO, FECHA FROM clientes
+          WHERE ESTADO LIKE 'Cliente' AND FECHA LIKE '%".$fecha."%'");
+        $num_clientes= mysqli_num_rows($query);
+$query= mysqli_query($conn, "SELECT ESTADO, FECHA FROM clientes
+          WHERE ESTADO LIKE 'Prospecto' AND FECHA LIKE '%".$fecha."%'");
+        $num_prospectos= mysqli_num_rows($query);?>
 <script>
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
@@ -239,7 +239,7 @@ var myChart = new Chart(ctx, {
 		data: {
 				labels: ['Clientes', 'Prospectos'],
 				datasets: [{
-						data: [12, 19],
+						data: [<?php echo "$num_clientes"; ?>, <?php echo "$num_prospectos"; ?>],
 						backgroundColor: [
 								'rgba(255, 99, 132, 0.2)',
 								'rgba(54, 162, 235, 0.2)',
