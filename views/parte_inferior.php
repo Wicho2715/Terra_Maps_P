@@ -53,10 +53,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"></script>
 
     <script src="interfaces/reportestab.js"></script>
-    <script src="interfaces/clientes.js"></script>
-    <script src="interfaces/contacto.js"></script>
-    <script src="interfaces/publicidad.js"></script>
-    <script src="interfaces/seguimiento.js"></script>
+    <script src="interfaces/clientestab.js"></script>
+    <script src="interfaces/contactotab.js"></script>
+    <script src="interfaces/publicidadtab.js"></script>
+    <script src="interfaces/seguimientotab.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
