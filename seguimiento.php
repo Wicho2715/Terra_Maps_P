@@ -1,4 +1,5 @@
 <?php require_once "views/parte_superior.php"?>
+
 <?php include("db/conexion.php");
 
 $query=mysqli_query($conn,"SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM contacto");

@@ -2,14 +2,10 @@
 $servername = "localhost";
 $database = "db_customer_assistant";
 $username = "root";
-$password = "raspberry";
-$port = "3306";
+$password = "";
+
 // Creacion de conexion
-$conn = mysqli_connect($servername, $username, $password, $database, $port);
+$conn = mysqli_connect($servername, $username, $password, $database);
 // Checar conexion
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-mysqli_close($conn);
+
 ?>
