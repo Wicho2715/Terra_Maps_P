@@ -90,7 +90,12 @@ if (isset($_POST['modificar'])) {
               </div>
               <div class="col-md-6">
                 <label for="estado">Estado:</label> 
-                <input name="estado" type="text" class="form-control"placeholder="" required value="<?php echo $estado; ?>">
+
+                <select class="form-control" name="estado" id="" required value="<?php echo $estado; ?>" >
+                        		<option value="Cliente">Cliente</option>
+														<option value="Prospecto">Prospecto</option>
+                        </select>
+
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div> 

@@ -42,7 +42,7 @@ $query=mysqli_query($conn,"SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM contacto");
                             while($contacto = mysqli_fetch_row($v))
                             {
                         ?>
-                            <option value="<?php echo $contacto[0] ?>"> <?php echo $contacto[1]?> </option>
+                            <option value="<?php echo $contacto[0] ?>"> <?php echo $contacto[7]?> </option>
                         <?php
                             }
                     
