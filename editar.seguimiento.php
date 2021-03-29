@@ -49,7 +49,11 @@ if (isset($_POST['modificar'])) {
               </div>
               <div class="col-md-6">
                 <label for="estadoc">Estado de la Cita:</label> 
-                <input name="estadoc" type="text" class="form-control" placeholder="" required value="<?php echo $estadoc; ?>">
+                <select class="form-control" name="estadoc" id="" required value="<?php echo $estadoc; ?>">
+                        		<option value="EN CURSO">EN CURSO</option>
+								            <option value="CANCELADA">CANCELADA</option>
+                                <option value="FINALIZADA">FINALIZADA</option>
+                        </select>
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div> 

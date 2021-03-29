@@ -27,7 +27,12 @@ $query=mysqli_query($conn,"SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM contacto");
                     </div>
                     <div class="col-md-6">
                         <label for="estadoc">Estado de la Cita:</label>
-                        <input type="text" name="estadoc"  class="form-control" placeholder="Estado en el que se encuentra la cita" value="" required>
+                        <select class="form-control" name="estadoc" id="" required >
+                            <option value="">Estado de la Cita</option>
+                        		<option value="EN CURSO">EN CURSO</option>
+								<option value="CANCELADA">CANCELADA</option>
+                                <option value="FINALIZADA">FINALIZADA</option>
+                        </select>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>
                     </div>
