@@ -1,5 +1,5 @@
 <?php
-$servername = "127.0.0.1";
+$servername = "localhost";
 $database = "db_customer_assistant";
 $username = "root";
 $password = "raspberry";
