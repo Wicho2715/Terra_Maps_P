@@ -1,4 +1,9 @@
 table.dataTable thead {
     background: #3977CE;
     color: white;
+    text-align: center;
+}
+
+table.dataTable tbody {
+    text-align: center;
 }
