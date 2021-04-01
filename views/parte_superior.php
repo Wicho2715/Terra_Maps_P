@@ -34,7 +34,7 @@ if($usuario == null || $usuario= ''){
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <link href="css/estilos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/estilotab3.css">
     <link rel="stylesheet" href="css/estilota.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
