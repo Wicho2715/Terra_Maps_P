@@ -153,9 +153,9 @@
                                 <!--class="table table-striped table-bordered table-condensed" style="width: 100%"-->
                                     <thead color:blue>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Proyecto</th>
-                                            <th>Inversion Inicial</th>
+                                            <th>Estado</th>
+                                            <th>Contacto</th>
+                                            <th>Asunto</th>
                                             
                                             
                                         </tr>
