@@ -7,3 +7,9 @@ table.dataTable thead {
 table.dataTable tbody {
     text-align: center;
 }
+
+thead {
+    background-color: #3977CE;
+    color: white;
+    text-align: center;
+}
