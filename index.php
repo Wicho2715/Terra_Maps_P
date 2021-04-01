@@ -149,9 +149,9 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                 <div class="table-responsive">
-                                <table class="table-bordered " id="" width="100%" cellspacing="0">
+                                <table class="table table-striped table-bordered table-condensed" id="" width="100%" cellspacing="0">
                                 <!--class="table table-striped table-bordered table-condensed" style="width: 100%"-->
-                                    <thead color:blue>
+                                    <thead>
                                         <tr>
                                             <th>Estado</th>
                                             <th>Contacto</th>
