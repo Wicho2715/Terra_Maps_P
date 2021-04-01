@@ -57,6 +57,32 @@ $resultado= mysqli_query($conn, $consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas > 0  && $password_decifrada== $password){
+  $fecha= date("Y-m-d");
+  $query= mysqli_query($conn, "SELECT ID_CONTACTO, ASUNTO, DESTINATARIO, FECHA_PC, NOMBRE_CONTACTO FROM contacto
+            WHERE FECHA_PC LIKE '%".$fecha."%' AND ESTADO LIKE 'Activo'");
+          $num_notif= mysqli_num_rows($query);
+          if ($num_notif=="0") {
+          }
+          $asunto= array();
+          $id_contacto= array();
+          $destinatario= array();
+          $fecha_pc= array();
+          $nombre_contacto= array();
+          $cont = 0;
+          while($row = mysqli_fetch_assoc($query)) {
+            $id_contacto[$cont] = $row['ID_CONTACTO'];
+            $asunto[$cont] = $row['ASUNTO'];
+            $destinatario[$cont] = $row['DESTINATARIO'];
+            $fecha_pc[$cont] = $row['FECHA_PC'];
+            $nombre_contacto[$cont] = $row['NOMBRE_CONTACTO'];
+            $cont++;
+          }
+  $_SESSION['id_contacto']= $id_contacto;
+  $_SESSION['asunto']= $asunto;
+  $_SESSION['destinatario']= $destinatario;
+  $_SESSION['fecha_pc']= $fecha_pc;
+  $_SESSION['nombre_contacto']= $nombre_contacto;
+  $_SESSION['num_notif']= $num_notif;
   $_SESSION['usuario']= $usuario;
   $_SESSION['nombre']= $nombre;
   $_SESSION['apellido']= $apellido;

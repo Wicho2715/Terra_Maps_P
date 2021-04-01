@@ -203,7 +203,7 @@ if($usuario == null || $usuario= ''){
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
+                                <span class="badge badge-danger badge-counter"><?php $num_notif= $_SESSION['num_notif']; echo "$num_notif"; ?></span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -211,43 +211,38 @@ if($usuario == null || $usuario= ''){
                                 <h6 class="dropdown-header">
                                     Citas programadas
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
+                                <?php
+                                $asunto= array();
+                                $id_contacto= array();
+                                $destinatario= array();
+                                $fecha_pc= array();
+                                $nombre_contacto= array();
+                                $id_contacto= $_SESSION['id_contacto'];
+                                $asunto= $_SESSION['asunto'];
+                                $destinatario= $_SESSION['destinatario'];
+                                $fecha_pc= $_SESSION['fecha_pc'];
+                                $nombre_contacto= $_SESSION['nombre_contacto'];
+                                $total= count($asunto);
+                                for ($i = 0; $i < $total; $i++) {
+
+                                    ?>
+                                    <a class="dropdown-item d-flex align-items-center" href="editar.contacto.php?ID_CONTACTO=<?php echo $id_contacto[$i]; ?>" >
+                                        <div class="mr-3">
+                                            <div class="icon-circle bg-primary">
+                                                <i class="fas fa-file-alt text-white"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Febrero 19, 2021</div>
-                                        <span class="font-weight-bold">Carlos Monter, 7711953264, Asunto cita programada.</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
+                                        <div>
+                                          <div class="small text-gray-500"><?php echo $fecha_pc[$i]; ?></div>
+                                          <span class="font-weight-bold">Nombre:<?php echo $nombre_contacto[$i]; ?>, contacto <?php echo $destinatario[$i]; ?>, Asunto: <?php echo $asunto[$i]; ?>.</span>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Febrero 19, 2021</div>
-                                        <span class="font-weight-bold">Eduardo Mendez, eduar13@hotmail.com, <br>Asunto cita programada.</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Febrero 19, 2021</div>
-                                        <span class="font-weight-bold">Alba Contreras, 7715259164, Asunto cita programada.</span>
-                                    </div>
-                                </a>
+                                    </a>
 
 
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
+                                    <?php
+                                }
+                                ?>
+                                </div>
                         </li>
 
 
