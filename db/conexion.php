@@ -2,7 +2,7 @@
 $servername = "localhost";
 $database = "db_customer_assistant";
 $username = "root";
-$password = "raspberry";
+$password = "";
 $port = 3306;
 
 
