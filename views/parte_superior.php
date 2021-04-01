@@ -203,7 +203,9 @@ if($usuario == null || $usuario= ''){
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter"><?php $num_notif= $_SESSION['num_notif']; echo "$num_notif"; ?></span>
+                                <span class="badge badge-danger badge-counter"><?php $num_notif= $_SESSION['num_notif']; if ($num_notif=="0") {
+                                  $num_notif= "";
+                                } echo "$num_notif"; ?></span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
