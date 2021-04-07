@@ -17,7 +17,17 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 TOTAL DE CLIENTES</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
+                                                $sql = "SELECT COUNT(*) FROM clientes WHERE ESTADO = 'CLIENTE'";
+                                                $result=mysqli_query($conn,$sql);
+                                                while($mostrar=mysqli_fetch_array($result)){
+
+                                                echo "<h5>"; echo $mostrar['COUNT(*)']; echo "</h5>";
+                                                }
+                                            ?>
+                                            
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                         <i class="fas fa-user-check fa-2x text-gray-300"></i>
@@ -35,7 +45,16 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 TOTAL DE PROSPECTOS</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
+                                                $sql = "SELECT COUNT(*) FROM clientes WHERE ESTADO = 'PROSPECTO'";
+                                                $result=mysqli_query($conn,$sql);
+                                                while($mostrar=mysqli_fetch_array($result)){
+
+                                                echo "<h5>"; echo $mostrar['COUNT(*)']; echo "</h5>";
+                                                }
+                                            ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
 
@@ -56,7 +75,16 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 TOTAL DE PROYECTOS</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
+                                                $sql = "SELECT COUNT(*) FROM proyecto_inicial";
+                                                $result=mysqli_query($conn,$sql);
+                                                while($mostrar=mysqli_fetch_array($result)){
+
+                                                echo "<h5>"; echo $mostrar['COUNT(*)']; echo "</h5>";
+                                                }
+                                            ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-paste fa-2x text-gray-300"></i>
@@ -74,7 +102,16 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 TOTAL DE USUARIOS</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
+                                                $sql = "SELECT COUNT(*) FROM login";
+                                                $result=mysqli_query($conn,$sql);
+                                                while($mostrar=mysqli_fetch_array($result)){
+
+                                                echo "<h5>"; echo $mostrar['COUNT(*)']; echo "</h5>";
+                                                }
+                                            ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user-friends fa-2x text-gray-300"></i>

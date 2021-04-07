@@ -53,8 +53,8 @@
                         <label for="estado">Estado del Cliente:</label>
 												<select class="form-control" name="estado" id="" required >
                             <option value="">Estado del cliente</option>
-                        		<option value="Cliente">Cliente</option>
-														<option value="Prospecto">Prospecto</option>
+                        		<option value="CLIENTE">CLIENTE</option>
+								<option value="PROSPECTO">PROSPECTO</option>
                         </select>
                         <div class="valid-feedback">¡OK valido!</div>
                         <div class="invalid-feedback">Completar el campo.</div>

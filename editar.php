@@ -92,8 +92,8 @@ if (isset($_POST['modificar'])) {
                 <label for="estado">Estado:</label> 
 
                 <select class="form-control" name="estado" id="" required value="<?php echo $estado; ?>" >
-                        		<option value="Cliente">Cliente</option>
-														<option value="Prospecto">Prospecto</option>
+                        		<option value="CLIENTE">CLIENTE</option>
+														<option value="PROSPECTO">PROSPECTO</option>
                         </select>
 
                 <div class="valid-feedback">¡OK valido!</div>
