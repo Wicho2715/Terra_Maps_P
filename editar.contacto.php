@@ -2,6 +2,8 @@
 
 include("db/conexion.php");
 
+$query=mysqli_query($conn,"SELECT ID_CLIENTE, NOMBRE FROM clientes");
+
 $tipoc = '';
 $destinatario = '';
 $asunto = '';
@@ -9,10 +11,12 @@ $resumen = '';
 $fechac = '';
 $nombrec = '';
 $acuerdo = '';
+$idcliente = '';
+$estado = '';
 
 if  (isset($_GET['ID_CONTACTO'])) {
   $id = $_GET['ID_CONTACTO'];
-  $query = "SELECT TIPO_CONTACTO, DESTINATARIO, ASUNTO, RESUMEN, FECHA_PC, NOMBRE_CONTACTO, ACUERDO FROM contacto WHERE ID_CONTACTO = $id";
+  $query = "SELECT T1.TIPO_CONTACTO, T1.DESTINATARIO, T1.ASUNTO, T1.RESUMEN, T1.FECHA_PC, T1.NOMBRE_CONTACTO, T1.ACUERDO, T2.NOMBRE, T1.ESTADO  FROM contacto T1 INNER JOIN clientes T2 ON T1.ID_CLIENTE = T2.ID_CLIENTE WHERE ID_CONTACTO = $id";
   $resultado = mysqli_query($conn, $query);
   if (mysqli_num_rows($resultado) == 1) {
     $row = mysqli_fetch_array($resultado);
@@ -23,6 +27,9 @@ if  (isset($_GET['ID_CONTACTO'])) {
     $fechac = $row['FECHA_PC'];
     $nombrec = $row['NOMBRE_CONTACTO'];
     $acuerdo = $row['ACUERDO'];
+    $nombre = $row['NOMBRE'];
+
+    $estado = $row['ESTADO'];
   }
 }
 
@@ -35,9 +42,11 @@ if (isset($_POST['modificar'])) {
   $fechac = $_POST['fechac'];
   $nombrec = $_POST['nombrec'];
   $acuerdo = $_POST['acuerdo'];
+  $idcliente = $_POST['idcliente'];
   $notificacion = $_POST['notificacion'];
+  
 
-  $query = "UPDATE contacto set TIPO_CONTACTO = '$tipoc', DESTINATARIO = '$destinatario', ASUNTO = '$asunto', RESUMEN = '$resumen', FECHA_PC = '$fechac', NOMBRE_CONTACTO = '$nombrec', ACUERDO = '$acuerdo', ESTADO = '$notificacion' WHERE ID_CONTACTO = $id";
+  $query = "UPDATE contacto set TIPO_CONTACTO = '$tipoc', DESTINATARIO = '$destinatario', ASUNTO = '$asunto', RESUMEN = '$resumen', FECHA_PC = '$fechac', NOMBRE_CONTACTO = '$nombrec', ACUERDO = '$acuerdo', ID_CLIENTE = '$idcliente', ESTADO = '$notificacion' WHERE ID_CONTACTO = $id";
   mysqli_query($conn, $query);
   header('Location: actualizar_notificaciones.php');
 }
@@ -109,13 +118,39 @@ if (isset($_POST['modificar'])) {
                 <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
+                <label for="idcliente">Nombre del Cliente:</label>
+                <select class="form-control" name="idcliente" id="" required value="<?php echo $nombre; ?>">
+                
+                        <?php
+                            $v = mysqli_query($conn,"SELECT * FROM clientes");
+                            while($cliente = mysqli_fetch_row($v))
+                            {
+                        ?>
+                            <option value="<?php echo $cliente[0] ?>"> <?php echo $cliente[1]?> </option>
+                        <?php
+                            }
+
+                        ?>
+                </select>
+                
+                  
+                <div class="valid-feedback">¡OK valido!</div>
+                <div class="invalid-feedback">Completar el campo.</div>
+              </div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+              
+              <div class="col-md-6">
                   <label for="notificacion">Mostar notificacion:</label>
-                  <select class="form-control" name="notificacion" id="" required >
-                      <option value="">Mostrar notificacion</option>
+                  <select class="form-control" name="notificacion" id="" required value="<?php echo $estado; ?>" >
                       <option value="Activo">Si</option>
                       <option value="Oculta">No</option>
                   </select>
                </div>
+              
           </div>
         </div>
         <div class="row">
