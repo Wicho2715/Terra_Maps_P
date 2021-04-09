@@ -35,10 +35,11 @@ if (isset($_POST['modificar'])) {
   $fechac = $_POST['fechac'];
   $nombrec = $_POST['nombrec'];
   $acuerdo = $_POST['acuerdo'];
+  $notificacion = $_POST['notificacion'];
 
-  $query = "UPDATE contacto set TIPO_CONTACTO = '$tipoc', DESTINATARIO = '$destinatario', ASUNTO = '$asunto', RESUMEN = '$resumen', FECHA_PC = '$fechac', NOMBRE_CONTACTO = '$nombrec', ACUERDO = '$acuerdo' WHERE ID_CONTACTO = $id";
+  $query = "UPDATE contacto set TIPO_CONTACTO = '$tipoc', DESTINATARIO = '$destinatario', ASUNTO = '$asunto', RESUMEN = '$resumen', FECHA_PC = '$fechac', NOMBRE_CONTACTO = '$nombrec', ACUERDO = '$acuerdo', ESTADO = '$notificacion' WHERE ID_CONTACTO = $id";
   mysqli_query($conn, $query);
-  header('Location: contacto.php');
+  header('Location: actualizar_notificaciones.php');
 }
 ?>
 
@@ -50,64 +51,72 @@ if (isset($_POST['modificar'])) {
             </div>
     <div class="card card-body">
       <form action="editar.contacto.php?ID_CONTACTO=<?php echo $_GET['ID_CONTACTO']; ?>" method="POST" class="needs-validation" novalidate>
-      
+
         <div class="form-group">
             <div class="row">
               <div class="col-md-6">
-                <label for="tipoc">Tipo Contacto:</label> 
+                <label for="tipoc">Tipo Contacto:</label>
                 <input name="tipoc" type="text" class="form-control" placeholder="" required value="<?php echo $tipoc;?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
-                <label for="destinatario">Destinatario:</label> 
+                <label for="destinatario">Destinatario:</label>
                 <input name="destinatario" type="text" class="form-control" placeholder="" required value="<?php echo $destinatario; ?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
-              </div> 
-            </div> 
+              </div>
+            </div>
         </div>
         <div class="form-group">
           <div class="row">
               <div class="col-md-6">
-                <label for="asunto">Asunto:</label> 
+                <label for="asunto">Asunto:</label>
                 <input name="asunto" type="text" class="form-control" placeholder="" required value="<?php echo $asunto;?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
-                <label for="resumen">Resumen:</label> 
+                <label for="resumen">Resumen:</label>
                 <input name="resumen" type="text" class="form-control" placeholder="" required value="<?php echo $resumen; ?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
-              </div> 
+              </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
               <div class="col-md-6">
-                <label for="fechac">Fecha del proximo Contacto:</label> 
+                <label for="fechac">Fecha del proximo Contacto:</label>
                 <input name="fechac" type="date" class="form-control" placeholder="" required value="<?php echo $fechac;?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div>
               <div class="col-md-6">
-                <label for="nombrec">Nombre del Contacto:</label> 
+                <label for="nombrec">Nombre del Contacto:</label>
                 <input name="nombrec" type="text" class="form-control" placeholder="" required value="<?php echo $nombrec; ?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
-              </div> 
-          </div> 
+              </div>
+          </div>
         </div>
         <div class="form-group">
           <div class="row">
               <div class="col-md-6">
-                <label for="acuerdo">Acuerdos:</label> 
+                <label for="acuerdo">Acuerdos:</label>
                 <input name="acuerdo" type="text" class="form-control" placeholder="" required value="<?php echo $acuerdo;?>">
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div>
-          </div> 
+              <div class="col-md-6">
+                  <label for="notificacion">Mostar notificacion:</label>
+                  <select class="form-control" name="notificacion" id="" required >
+                      <option value="">Mostrar notificacion</option>
+                      <option value="Activo">Si</option>
+                      <option value="Oculta">No</option>
+                  </select>
+               </div>
+          </div>
         </div>
         <div class="row">
         	<div class="col-lg-12">

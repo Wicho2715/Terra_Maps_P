@@ -11,8 +11,9 @@ if(isset($_POST['guardarc'])){
     $acuerdo = $_POST['acuerdo'];
     $idcliente = $_POST['idcliente'];
     $idpublicidad = $_POST['idpublicidad'];
-    
-    $query = "INSERT INTO contacto(TIPO_CONTACTO, DESTINATARIO, ASUNTO, RESUMEN, FECHA_PC, NOMBRE_CONTACTO, ACUERDO, ID_CLIENTE, ID_PUBLICIDAD) VALUES ('$tipoc', '$destinatario', '$asunto', '$resumen', '$fechac', '$nombrec', '$acuerdo', '$idcliente', '$idpublicidad')";
+    $notificacion = $_POST['notificacion'];
+
+    $query = "INSERT INTO contacto(TIPO_CONTACTO, DESTINATARIO, ASUNTO, RESUMEN, FECHA_PC, NOMBRE_CONTACTO, ACUERDO, ID_CLIENTE, ID_PUBLICIDAD, ESTADO) VALUES ('$tipoc', '$destinatario', '$asunto', '$resumen', '$fechac', '$nombrec', '$acuerdo', '$idcliente', '$idpublicidad', '$notificacion')";
     $resultado = mysqli_query($conn, $query);
     if(!$resultado){
         echo '<script>
@@ -22,7 +23,7 @@ if(isset($_POST['guardarc'])){
     }else{
         echo '<script>
         alert("Informacion gurdada correctamente");
-        window.history.go(-1);
-        </script>' ; 
-    } 
+        window.location="../actualizar_notificaciones.php";
+        </script>' ;
+    }
 }

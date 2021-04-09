@@ -1,10 +1,10 @@
 
 <?php require_once "views/parte_superior.php"?>
-<?php include("db/conexion.php"); 
+<?php include("db/conexion.php");
 $query=mysqli_query($conn,"SELECT ID_CLIENTE, NOMBRE FROM clientes");
 
 $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
-?>	
+?>
 <div class="container">
         <div class="card">
             <div class="card-header bg-primary">
@@ -69,17 +69,17 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
                     </div>
                     <div class="col-md-6">
                         <label for="idcliente">Nombre del Cliente:</label>
-                        <select class="form-control" name="idcliente" id="" required > 
+                        <select class="form-control" name="idcliente" id="" required >
                             <option value="">Nombre del Cliente</option>
                         <?php
-                            $v = mysqli_query($conn,"SELECT * FROM clientes"); 
+                            $v = mysqli_query($conn,"SELECT * FROM clientes");
                             while($cliente = mysqli_fetch_row($v))
                             {
                         ?>
                             <option value="<?php echo $cliente[0] ?>"> <?php echo $cliente[1]?> </option>
                         <?php
                             }
-                    
+
                         ?>
                         </select>
                     </div>
@@ -87,23 +87,31 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
                 <div class="row">
                     <div class="col-md-6">
                         <label for="idpublicidad">Nombre de la Publicidad:</label>
-                        <select class="form-control" name="idpublicidad" id="" required > 
+                        <select class="form-control" name="idpublicidad" id="" required >
                             <option value="">Nombre de la publicidad</option>
                         <?php
-                            $v = mysqli_query($conn,"SELECT * FROM publicidad"); 
+                            $v = mysqli_query($conn,"SELECT * FROM publicidad");
                             while($publicidad = mysqli_fetch_row($v))
                             {
                         ?>
                             <option value="<?php echo $publicidad[0] ?>"> <?php echo $publicidad[1]?> </option>
                         <?php
                             }
-                    
+
                         ?>
                         </select>
-                     </div>  
+                     </div>
+                     <div class="col-md-6">
+                         <label for="notificacion">Mostar notificacion:</label>
+                         <select class="form-control" name="notificacion" id="" required >
+                             <option value="">Mostrar notificacion</option>
+                             <option value="Activo">Si</option>
+                             <option value="Oculta">No</option>
+                         </select>
+                      </div>
                 </div>
-				</form>	
-                
+				</form>
+
             </div>
             <div class="card-footer">
                 <div class="container">
@@ -130,7 +138,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
                                     <tbody>
 									<?php
 									$query = "SELECT * FROM contacto";
-									$result_contacto = mysqli_query($conn, $query);    
+									$result_contacto = mysqli_query($conn, $query);
 
 									while($row = mysqli_fetch_assoc($result_contacto)) { ?>
 									<tr>
@@ -157,7 +165,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
 									<?php } ?>
                                     </tbody>
                                 </table>
-                                <br> 
+                                <br>
                             </div>
                         </div>
                     </div>
@@ -199,7 +207,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
                             <div class="invalid-feedback">Completar el campo.</div>
                         </div>
                     </div>
-                </form>                        
+                </form>
             </div>
             <div class="card-footer">
                 <div class="container">
@@ -219,7 +227,7 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
                                     <tbody>
                                         <?php
                                             $query = "SELECT * FROM publicidad";
-                                            $result_publicidad = mysqli_query($conn, $query);    
+                                            $result_publicidad = mysqli_query($conn, $query);
 
                                             while($row = mysqli_fetch_assoc($result_publicidad)) { ?>
                                                 <tr>
@@ -244,6 +252,6 @@ $query=mysqli_query($conn,"SELECT ID_PUBLICIDAD, NOMBRE_PU FROM publicidad");
                     </div>
                 </div>
             </div>
-    </div>	
+    </div>
 
 <?php require_once "views/parte_inferior.php"?>

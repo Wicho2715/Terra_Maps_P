@@ -214,30 +214,38 @@ if($usuario == null || $usuario= ''){
                                     Citas programadas
                                 </h6>
                                 <?php
-                                $asunto= array();
-                                $id_contacto= array();
-                                $destinatario= array();
-                                $fecha_pc= array();
-                                $nombre_contacto= array();
-                                $id_contacto= $_SESSION['id_contacto'];
-                                $asunto= $_SESSION['asunto'];
-                                $destinatario= $_SESSION['destinatario'];
-                                $fecha_pc= $_SESSION['fecha_pc'];
-                                $nombre_contacto= $_SESSION['nombre_contacto'];
-                                $total= count($asunto);
+                                $asuntoo= array();
+                                $id_contactoo= array();
+                                $destinatarioo= array();
+                                $fecha_pcc= array();
+                                $nombre_contactoo= array();
+                                $id_contactoo= $_SESSION['id_contacto'];
+                                $asuntoo= $_SESSION['asunto'];
+                                $destinatarioo= $_SESSION['destinatario'];
+                                $fecha_pcc= $_SESSION['fecha_pc'];
+                                $nombre_contactoo= $_SESSION['nombre_contacto'];
+                                $total= count($id_contactoo);
+                                if ($total==0) {?>
+                                  <a class="dropdown-item d-flex align-items-center" href="#" >Hoy no tienes citas programadas</a>
+                                <?php }
                                 for ($i = 0; $i < $total; $i++) {
 
                                     ?>
-                                    <a class="dropdown-item d-flex align-items-center" href="editar.contacto.php?ID_CONTACTO=<?php echo $id_contacto[$i]; ?>" >
+                                    <br>
+                                    <center><a class="btn btn-outline-primary" href="editar.contacto.php?ID_CONTACTO=<?php echo $id_contactoo[$i]; ?>">Actualizar</a>
+                                    <a class="btn btn-outline-danger" href="quitar_notificacion.php?ID_CONTACTO=<?php echo $id_contactoo[$i]; ?>">Quitar</a></center>
+                                    <a class="dropdown-item d-flex align-items-center" href="seguimiento.php" >
                                         <div class="mr-3">
                                             <div class="icon-circle bg-primary">
                                                 <i class="fas fa-file-alt text-white"></i>
                                             </div>
                                         </div>
                                         <div>
-                                          <div class="small text-gray-500"><?php echo $fecha_pc[$i]; ?></div>
-                                          <span class="font-weight-bold">Nombre:<?php echo $nombre_contacto[$i]; ?>, contacto <?php echo $destinatario[$i]; ?>, Asunto: <?php echo $asunto[$i]; ?>.</span>
+                                          <div class="small text-gray-500"><?php echo $fecha_pcc[$i]; ?></div>
+                                          <span class="font-weight-bold">Nombre: <?php echo $nombre_contactoo[$i]; ?>, Contacto: <?php echo $destinatarioo[$i]; ?>, Asunto: <?php echo $asuntoo[$i]; ?>.</span>
+
                                         </div>
+
                                     </a>
 
 
@@ -257,9 +265,9 @@ if($usuario == null || $usuario= ''){
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                   <?php
-                                    $nombrec= $_SESSION['nombre'];
+                                    $nombree= $_SESSION['nombre'];
                                     $apellido= $_SESSION['apellido'];
-                                    echo "$nombrec ";
+                                    echo "$nombree";
                                   ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
