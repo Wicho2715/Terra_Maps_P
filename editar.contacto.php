@@ -44,7 +44,7 @@ if (isset($_POST['modificar'])) {
   $acuerdo = $_POST['acuerdo'];
   $idcliente = $_POST['idcliente'];
   $notificacion = $_POST['notificacion'];
-  
+
 
   $query = "UPDATE contacto set TIPO_CONTACTO = '$tipoc', DESTINATARIO = '$destinatario', ASUNTO = '$asunto', RESUMEN = '$resumen', FECHA_PC = '$fechac', NOMBRE_CONTACTO = '$nombrec', ACUERDO = '$acuerdo', ID_CLIENTE = '$idcliente', ESTADO = '$notificacion' WHERE ID_CONTACTO = $id";
   mysqli_query($conn, $query);
@@ -120,7 +120,7 @@ if (isset($_POST['modificar'])) {
               <div class="col-md-6">
                 <label for="idcliente">Nombre del Cliente:</label>
                 <select class="form-control" name="idcliente" id="" required value="<?php echo $nombre; ?>">
-                
+
                         <?php
                             $v = mysqli_query($conn,"SELECT * FROM clientes");
                             while($cliente = mysqli_fetch_row($v))
@@ -132,8 +132,8 @@ if (isset($_POST['modificar'])) {
 
                         ?>
                 </select>
-                
-                  
+
+
                 <div class="valid-feedback">¡OK valido!</div>
                 <div class="invalid-feedback">Completar el campo.</div>
               </div>
@@ -142,15 +142,20 @@ if (isset($_POST['modificar'])) {
         </div>
         <div class="form-group">
           <div class="row">
-              
+
               <div class="col-md-6">
                   <label for="notificacion">Mostar notificacion:</label>
-                  <select class="form-control" name="notificacion" id="" required value="<?php echo $estado; ?>" >
-                      <option value="Activo">Si</option>
-                      <option value="Oculta">No</option>
+                  <select class="form-control" name="notificacion" id="" required>
+                    <option value="">Mostrar notificacion</option>
+                      <option value="Activo" <?php if ($estado=='Activo') {
+                        echo 'selected="selected"';
+                      }?> >Si</option>
+                      <option value="Oculta" <?php if ($estado=='Oculta') {
+                        echo 'selected="selected"';
+                      }?> >No</option>
                   </select>
                </div>
-              
+
           </div>
         </div>
         <div class="row">
